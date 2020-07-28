@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="my_package" type="hello_world_info" name="hello_world" output="log" />
+    <node pkg="my_package" type="hello_world_pub" name="publisher" output="log" />
+    <node pkg="my_package" type="hello_world_sub" name="subscriber" output="screen" />
+
+</launch>
