@@ -1,8 +1,8 @@
-prefix=/home/tx2-08/ROS-Projects/interbotix_ws/devel
+prefix=/home/locobot/ROS-Projects/interbotix_ws/devel
 
 Name: interbotix_descriptions
 Description: Description of interbotix_descriptions
 Version: 0.0.0
 Cflags: 
-Libs: -L${prefix}/lib 
+Libs: -L/home/locobot/ROS-Projects/interbotix_ws/devel/lib 
 Requires: joint_state_publisher joint_state_publisher_gui robot_state_publisher roslaunch rviz xacro

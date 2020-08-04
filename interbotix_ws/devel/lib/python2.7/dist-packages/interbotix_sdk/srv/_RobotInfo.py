@@ -9,30 +9,30 @@ import struct
 class RobotInfoRequest(genpy.Message):
   _md5sum = "d41d8cd98f00b204e9800998ecf8427e"
   _type = "interbotix_sdk/RobotInfoRequest"
-  _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """# Get robot information
-#
-# Note that all data that is returned in a vector is organized such that each index
-# corresponds to the joint at the same index as it appears in the joint_states topic.
-# Gripper info is NOT included in the vectors.
-#
-# Multiple types of robot information are provided, including:
-#   1) joint_names - the names of all joints in the robot
-#   2) joint_ids - the Dynamixel IDs for all joints in the robot
-#   3) lower_joint_limits - the lower joint limits in radians (taken from URDF)
-#   4) upper_joint_limits - the upper joint limits in radians (taken from URDF)
-#   5) velocity_limits - the velocity limits in rad/s (taken from URDF)
-#   6) lower_gripper_limit - the lower gripper limit in radians (taken from URDF)
-#   7) upper_gripper_limit - the upper gripper limit in radians (taken from URDF)
-#   8) use_gripper - True if the driver node can control the gripper - otherwise, False
-#   9) home_pos - home position for each robot; essentially commands all joints
-#                 (excluding gripper) to 0 radians (taken from arm_poses.h)
-#   10) sleep_pos - sleep position for each robot; essentially commands all joints
-#                   (excluding gripper) to a specific position in radians so that
-#                   if the driver node is shutdown (which torques off all motors),
-#                   the arm doesn't come crashing down (taken from arm_poses.h)
-#   11) num_joints - the number of joints in the arm (excluding gripper)
-#   12) num_single_joints - the number of all joints in the robot (includes gripper and any 'single' joints)
+  _has_header = False #flag to mark the presence of a Header object
+  _full_text = """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 """
   __slots__ = []
@@ -80,7 +80,7 @@ class RobotInfoRequest(genpy.Message):
       end = 0
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -104,7 +104,7 @@ class RobotInfoRequest(genpy.Message):
       end = 0
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
@@ -121,8 +121,8 @@ import struct
 class RobotInfoResponse(genpy.Message):
   _md5sum = "8cbf67af7802be3e000262518104df12"
   _type = "interbotix_sdk/RobotInfoResponse"
-  _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """# joint names appear in the same order as they do in the joint_states.name vector
+  _has_header = False #flag to mark the presence of a Header object
+  _full_text = """
 string[] joint_names
 int16[] joint_ids
 float64[] lower_joint_limits
@@ -156,7 +156,7 @@ int8 num_single_joints
     """
     if args or kwds:
       super(RobotInfoResponse, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.joint_names is None:
         self.joint_names = []
       if self.joint_ids is None:
@@ -321,7 +321,7 @@ int8 num_single_joints
       (_x.num_joints, _x.num_single_joints,) = _get_struct_2b().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -446,7 +446,7 @@ int8 num_single_joints
       (_x.num_joints, _x.num_single_joints,) = _get_struct_2b().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

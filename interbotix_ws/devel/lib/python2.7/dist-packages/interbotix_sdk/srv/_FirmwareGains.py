@@ -9,40 +9,40 @@ import struct
 class FirmwareGainsRequest(genpy.Message):
   _md5sum = "1a3c17ff4352d3a3bf5d6c64d4bd58a6"
   _type = "interbotix_sdk/FirmwareGainsRequest"
-  _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """# Send Position PID and/or Velocity PI gains to the firmware
-#
-# To get familiar with the register values, go to...
-# http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/
-# ...click on a motor model, and scroll down to the 'Control Table of RAM Area' section.
-#
-# Set 'joint_id' to 0 if you want to specify pid gains for each joint separately.
-# Each column in the arrays below will then correspond to a single joint. Note that
-# this is the case even if the joint is controlled by two motors. Thus, the total
-# size of each array will be equivalent to the number of joints in the robot. Also,
-# joints are listed from the 'bottom-up'. For example, the indexes corresponding to
-# the WX200 robot would be [waist, shoulder, elbow, wrist_angle, wrist_rotate, gripper].
-#
-# Set 'joint_id' to 1 or higher to specify pid gains for only that joint. In this
-# case, 'joint_id' corresponds to the motor id specified in the robot-specific 'yaml'
-# file located in the 'config' directory. Additionally, the arrays below will all
-# have a length of 1.
+  _has_header = False #flag to mark the presence of a Header object
+  _full_text = """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int8 joint_id
 
-# Each index in the arrays below correspond to a specific joint. Note that if a
-# joint is controlled by two motors, both motors' pid gains will change. Values
-# can range from 0 - 16,383.
+
+
+
 int32[] Kp_pos
 int32[] Ki_pos
 int32[] Kd_pos
 
-# In a similar fashion, the feed-forward velocity gains (K1) and feed-forward acceleration
-# gains (K2) can be specified. The range of values is the same as that for the PID gains.
+
+
 
 int32[] K1
 int32[] K2
 
-# Set Velocity PI gains similarly below.
+
 
 int32[] Kp_vel
 int32[] Ki_vel
@@ -66,7 +66,7 @@ int32[] Ki_vel
     """
     if args or kwds:
       super(FirmwareGainsRequest, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.joint_id is None:
         self.joint_id = 0
       if self.Kp_pos is None:
@@ -105,8 +105,7 @@ int32[] Ki_vel
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.joint_id
-      buff.write(_get_struct_b().pack(_x))
+      buff.write(_get_struct_b().pack(self.joint_id))
       length = len(self.Kp_pos)
       buff.write(_struct_I.pack(length))
       pattern = '<%si'%length
@@ -199,7 +198,7 @@ int32[] Ki_vel
       self.Ki_vel = struct.unpack(pattern, str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -209,8 +208,7 @@ int32[] Ki_vel
     :param numpy: numpy python module
     """
     try:
-      _x = self.joint_id
-      buff.write(_get_struct_b().pack(_x))
+      buff.write(_get_struct_b().pack(self.joint_id))
       length = len(self.Kp_pos)
       buff.write(_struct_I.pack(length))
       pattern = '<%si'%length
@@ -304,7 +302,7 @@ int32[] Ki_vel
       self.Ki_vel = numpy.frombuffer(str[start:end], dtype=numpy.int32, count=length)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
@@ -327,7 +325,7 @@ import struct
 class FirmwareGainsResponse(genpy.Message):
   _md5sum = "d41d8cd98f00b204e9800998ecf8427e"
   _type = "interbotix_sdk/FirmwareGainsResponse"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """
 """
   __slots__ = []
@@ -375,7 +373,7 @@ class FirmwareGainsResponse(genpy.Message):
       end = 0
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -399,7 +397,7 @@ class FirmwareGainsResponse(genpy.Message):
       end = 0
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

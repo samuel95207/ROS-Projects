@@ -57,8 +57,8 @@ struct DataType< ::interbotix_sdk::FirmwareGains > {
 };
 
 
-// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGainsRequest> should match
-// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGains >
+// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGainsRequest> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGains > 
 template<>
 struct MD5Sum< ::interbotix_sdk::FirmwareGainsRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::interbotix_sdk::FirmwareGainsRequest>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::FirmwareGainsRequest> should match
-// service_traits::DataType< ::interbotix_sdk::FirmwareGains >
+// service_traits::DataType< ::interbotix_sdk::FirmwareGainsRequest> should match 
+// service_traits::DataType< ::interbotix_sdk::FirmwareGains > 
 template<>
 struct DataType< ::interbotix_sdk::FirmwareGainsRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::interbotix_sdk::FirmwareGainsRequest>
   }
 };
 
-// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGainsResponse> should match
-// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGains >
+// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGainsResponse> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::FirmwareGains > 
 template<>
 struct MD5Sum< ::interbotix_sdk::FirmwareGainsResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::interbotix_sdk::FirmwareGainsResponse>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::FirmwareGainsResponse> should match
-// service_traits::DataType< ::interbotix_sdk::FirmwareGains >
+// service_traits::DataType< ::interbotix_sdk::FirmwareGainsResponse> should match 
+// service_traits::DataType< ::interbotix_sdk::FirmwareGains > 
 template<>
 struct DataType< ::interbotix_sdk::FirmwareGainsResponse>
 {

@@ -66,21 +66,6 @@ ros::message_operations::Printer< ::interbotix_sdk::SingleCommand_<ContainerAllo
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::interbotix_sdk::SingleCommand_<ContainerAllocator1> & lhs, const ::interbotix_sdk::SingleCommand_<ContainerAllocator2> & rhs)
-{
-  return lhs.joint_name == rhs.joint_name &&
-    lhs.cmd == rhs.cmd;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::interbotix_sdk::SingleCommand_<ContainerAllocator1> & lhs, const ::interbotix_sdk::SingleCommand_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace interbotix_sdk
 
 namespace ros
@@ -88,6 +73,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_sdk': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_sdk/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -152,25 +143,25 @@ struct Definition< ::interbotix_sdk::SingleCommand_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "# Send a command to the specified joint\n"
-"#\n"
-"# 'joint_name' is the name of the joint to control (any of the motor names listed\n"
-"# in the 'order' or 'singles' lists located in a motor config file - except for shadow motors)\n"
-"# 'cmd' can be a position [rad], velocity [rad/s], current [mA], or pwm depending on what operating\n"
-"# mode the joint is currently set at.\n"
-"#\n"
-"# Note that the gripper can be controlled by publishing this type of message to the\n"
-"# /<robot_name>/single_joint/command topic as well. There are two main differences between using\n"
-"# this topic and the /<robot_name>/gripper/command topic for controlling the gripper:\n"
-"#   1) By publishing to the /<robot_name>/gripper/command topic, you do not have to specify that you\n"
-"#      are commanding the gripper - it's automatically understood.\n"
-"#   2) When the gripper is in \"position\" control, using the /<robot_name>/gripper/command topic specifies a\n"
-"#      linear distance in meters between the gripper fingers. However, using the /<robot_name>/single_joint/command\n"
-"#      topic specifies an angular distance in radians.\n"
-"\n"
-"string joint_name\n"
-"float64 cmd\n"
-;
+    return "# Send a command to the specified joint\n\
+#\n\
+# 'joint_name' is the name of the joint to control (any of the motor names listed\n\
+# in the 'order' or 'singles' lists located in a motor config file - except for shadow motors)\n\
+# 'cmd' can be a position [rad], velocity [rad/s], current [mA], or pwm depending on what operating\n\
+# mode the joint is currently set at.\n\
+#\n\
+# Note that the gripper can be controlled by publishing this type of message to the\n\
+# /<robot_name>/single_joint/command topic as well. There are two main differences between using\n\
+# this topic and the /<robot_name>/gripper/command topic for controlling the gripper:\n\
+#   1) By publishing to the /<robot_name>/gripper/command topic, you do not have to specify that you\n\
+#      are commanding the gripper - it's automatically understood.\n\
+#   2) When the gripper is in \"position\" control, using the /<robot_name>/gripper/command topic specifies a\n\
+#      linear distance in meters between the gripper fingers. However, using the /<robot_name>/single_joint/command\n\
+#      topic specifies an angular distance in radians.\n\
+\n\
+string joint_name\n\
+float64 cmd\n\
+";
   }
 
   static const char* value(const ::interbotix_sdk::SingleCommand_<ContainerAllocator>&) { return value(); }

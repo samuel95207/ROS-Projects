@@ -9,7 +9,7 @@ import struct
 class SingleCommand(genpy.Message):
   _md5sum = "6d45868a3dac16da3c97708e8cdbf2c6"
   _type = "interbotix_sdk/SingleCommand"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """# Send a command to the specified joint
 #
 # 'joint_name' is the name of the joint to control (any of the motor names listed
@@ -48,7 +48,7 @@ float64 cmd
     """
     if args or kwds:
       super(SingleCommand, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.joint_name is None:
         self.joint_name = ''
       if self.cmd is None:
@@ -75,8 +75,7 @@ float64 cmd
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      _x = self.cmd
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.cmd))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -101,7 +100,7 @@ float64 cmd
       (self.cmd,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -117,8 +116,7 @@ float64 cmd
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      _x = self.cmd
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.cmd))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -144,7 +142,7 @@ float64 cmd
       (self.cmd,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

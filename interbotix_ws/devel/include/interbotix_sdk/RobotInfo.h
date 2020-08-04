@@ -57,8 +57,8 @@ struct DataType< ::interbotix_sdk::RobotInfo > {
 };
 
 
-// service_traits::MD5Sum< ::interbotix_sdk::RobotInfoRequest> should match
-// service_traits::MD5Sum< ::interbotix_sdk::RobotInfo >
+// service_traits::MD5Sum< ::interbotix_sdk::RobotInfoRequest> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::RobotInfo > 
 template<>
 struct MD5Sum< ::interbotix_sdk::RobotInfoRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::interbotix_sdk::RobotInfoRequest>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::RobotInfoRequest> should match
-// service_traits::DataType< ::interbotix_sdk::RobotInfo >
+// service_traits::DataType< ::interbotix_sdk::RobotInfoRequest> should match 
+// service_traits::DataType< ::interbotix_sdk::RobotInfo > 
 template<>
 struct DataType< ::interbotix_sdk::RobotInfoRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::interbotix_sdk::RobotInfoRequest>
   }
 };
 
-// service_traits::MD5Sum< ::interbotix_sdk::RobotInfoResponse> should match
-// service_traits::MD5Sum< ::interbotix_sdk::RobotInfo >
+// service_traits::MD5Sum< ::interbotix_sdk::RobotInfoResponse> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::RobotInfo > 
 template<>
 struct MD5Sum< ::interbotix_sdk::RobotInfoResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::interbotix_sdk::RobotInfoResponse>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::RobotInfoResponse> should match
-// service_traits::DataType< ::interbotix_sdk::RobotInfo >
+// service_traits::DataType< ::interbotix_sdk::RobotInfoResponse> should match 
+// service_traits::DataType< ::interbotix_sdk::RobotInfo > 
 template<>
 struct DataType< ::interbotix_sdk::RobotInfoResponse>
 {

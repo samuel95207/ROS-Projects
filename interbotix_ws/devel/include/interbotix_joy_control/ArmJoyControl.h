@@ -88,74 +88,6 @@ struct ArmJoyControl_
 
 
 
-// reducing the odds to have name collisions with Windows.h 
-#if defined(_WIN32) && defined(EE_X_INC)
-  #undef EE_X_INC
-#endif
-#if defined(_WIN32) && defined(EE_X_DEC)
-  #undef EE_X_DEC
-#endif
-#if defined(_WIN32) && defined(EE_Y_INC)
-  #undef EE_Y_INC
-#endif
-#if defined(_WIN32) && defined(EE_Y_DEC)
-  #undef EE_Y_DEC
-#endif
-#if defined(_WIN32) && defined(EE_Z_INC)
-  #undef EE_Z_INC
-#endif
-#if defined(_WIN32) && defined(EE_Z_DEC)
-  #undef EE_Z_DEC
-#endif
-#if defined(_WIN32) && defined(EE_ROLL_CCW)
-  #undef EE_ROLL_CCW
-#endif
-#if defined(_WIN32) && defined(EE_ROLL_CW)
-  #undef EE_ROLL_CW
-#endif
-#if defined(_WIN32) && defined(EE_PITCH_UP)
-  #undef EE_PITCH_UP
-#endif
-#if defined(_WIN32) && defined(EE_PITCH_DOWN)
-  #undef EE_PITCH_DOWN
-#endif
-#if defined(_WIN32) && defined(WAIST_CCW)
-  #undef WAIST_CCW
-#endif
-#if defined(_WIN32) && defined(WAIST_CW)
-  #undef WAIST_CW
-#endif
-#if defined(_WIN32) && defined(GRIPPER_OPEN)
-  #undef GRIPPER_OPEN
-#endif
-#if defined(_WIN32) && defined(GRIPPER_CLOSE)
-  #undef GRIPPER_CLOSE
-#endif
-#if defined(_WIN32) && defined(HOME_POSE)
-  #undef HOME_POSE
-#endif
-#if defined(_WIN32) && defined(SLEEP_POSE)
-  #undef SLEEP_POSE
-#endif
-#if defined(_WIN32) && defined(SPEED_INC)
-  #undef SPEED_INC
-#endif
-#if defined(_WIN32) && defined(SPEED_DEC)
-  #undef SPEED_DEC
-#endif
-#if defined(_WIN32) && defined(SPEED_COURSE)
-  #undef SPEED_COURSE
-#endif
-#if defined(_WIN32) && defined(SPEED_FINE)
-  #undef SPEED_FINE
-#endif
-#if defined(_WIN32) && defined(GRIPPER_PWM_INC)
-  #undef GRIPPER_PWM_INC
-#endif
-#if defined(_WIN32) && defined(GRIPPER_PWM_DEC)
-  #undef GRIPPER_PWM_DEC
-#endif
-
   enum {
     EE_X_INC = 1,
     EE_X_DEC = 2,
@@ -247,30 +179,6 @@ ros::message_operations::Printer< ::interbotix_joy_control::ArmJoyControl_<Conta
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::interbotix_joy_control::ArmJoyControl_<ContainerAllocator1> & lhs, const ::interbotix_joy_control::ArmJoyControl_<ContainerAllocator2> & rhs)
-{
-  return lhs.ee_x_cmd == rhs.ee_x_cmd &&
-    lhs.ee_y_cmd == rhs.ee_y_cmd &&
-    lhs.ee_z_cmd == rhs.ee_z_cmd &&
-    lhs.ee_roll_cmd == rhs.ee_roll_cmd &&
-    lhs.ee_pitch_cmd == rhs.ee_pitch_cmd &&
-    lhs.waist_cmd == rhs.waist_cmd &&
-    lhs.gripper_cmd == rhs.gripper_cmd &&
-    lhs.robot_pose == rhs.robot_pose &&
-    lhs.speed_cmd == rhs.speed_cmd &&
-    lhs.toggle_speed_cmd == rhs.toggle_speed_cmd &&
-    lhs.gripper_pwm_cmd == rhs.gripper_pwm_cmd;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::interbotix_joy_control::ArmJoyControl_<ContainerAllocator1> & lhs, const ::interbotix_joy_control::ArmJoyControl_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace interbotix_joy_control
 
 namespace ros
@@ -278,6 +186,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_joy_control': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_examples/interbotix_joy_control/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -342,76 +256,76 @@ struct Definition< ::interbotix_joy_control::ArmJoyControl_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "# Send commands from the joy_control node to the joy_robot_control node\n"
-"\n"
-"# enum values that define the joystick controls for the robot\n"
-"\n"
-"#########################################################################################################\n"
-"\n"
-"# Control the motion of the virtual 'ee_gripper_link' or end effector using the modern_robotics_ik engine\n"
-"# Position Control\n"
-"int8 EE_X_INC = 1\n"
-"int8 EE_X_DEC = 2\n"
-"int8 EE_Y_INC = 3\n"
-"int8 EE_Y_DEC = 4\n"
-"int8 EE_Z_INC = 5\n"
-"int8 EE_Z_DEC = 6\n"
-"\n"
-"# Orientation Control\n"
-"int8 EE_ROLL_CCW = 7\n"
-"int8 EE_ROLL_CW = 8\n"
-"int8 EE_PITCH_UP = 9\n"
-"int8 EE_PITCH_DOWN = 10\n"
-"\n"
-"#########################################################################################################\n"
-"\n"
-"# Control the motion of independent joints on the Arm or send predefined robot poses\n"
-"# Waist Joint Control\n"
-"int8 WAIST_CCW = 11\n"
-"int8 WAIST_CW = 12\n"
-"\n"
-"# Gripper Control\n"
-"int8 GRIPPER_OPEN = 13\n"
-"int8 GRIPPER_CLOSE = 14\n"
-"\n"
-"# Pose Control\n"
-"int8 HOME_POSE = 15\n"
-"int8 SLEEP_POSE = 16\n"
-"\n"
-"#########################################################################################################\n"
-"\n"
-"# Customize configurations for the Interbotix Arm\n"
-"# Inc/Dec Joint speed\n"
-"int8 SPEED_INC = 17\n"
-"int8 SPEED_DEC = 18\n"
-"\n"
-"# Quickly toggle between a fast and slow speed setting\n"
-"int8 SPEED_COURSE = 19\n"
-"int8 SPEED_FINE = 20\n"
-"\n"
-"# Inc/Dec Gripper pressure\n"
-"int8 GRIPPER_PWM_INC = 21\n"
-"int8 GRIPPER_PWM_DEC = 22\n"
-"\n"
-"#########################################################################################################\n"
-"\n"
-"# Control the motion of the Interbotix Arm\n"
-"int8 ee_x_cmd\n"
-"int8 ee_y_cmd\n"
-"int8 ee_z_cmd\n"
-"int8 ee_roll_cmd\n"
-"int8 ee_pitch_cmd\n"
-"\n"
-"# Independent Joint/Pose Control\n"
-"int8 waist_cmd\n"
-"int8 gripper_cmd\n"
-"int8 robot_pose\n"
-"\n"
-"# Speed Configs\n"
-"int8 speed_cmd\n"
-"int8 toggle_speed_cmd\n"
-"int8 gripper_pwm_cmd\n"
-;
+    return "# Send commands from the joy_control node to the joy_robot_control node\n\
+\n\
+# enum values that define the joystick controls for the robot\n\
+\n\
+#########################################################################################################\n\
+\n\
+# Control the motion of the virtual 'ee_gripper_link' or end effector using the modern_robotics_ik engine\n\
+# Position Control\n\
+int8 EE_X_INC = 1\n\
+int8 EE_X_DEC = 2\n\
+int8 EE_Y_INC = 3\n\
+int8 EE_Y_DEC = 4\n\
+int8 EE_Z_INC = 5\n\
+int8 EE_Z_DEC = 6\n\
+\n\
+# Orientation Control\n\
+int8 EE_ROLL_CCW = 7\n\
+int8 EE_ROLL_CW = 8\n\
+int8 EE_PITCH_UP = 9\n\
+int8 EE_PITCH_DOWN = 10\n\
+\n\
+#########################################################################################################\n\
+\n\
+# Control the motion of independent joints on the Arm or send predefined robot poses\n\
+# Waist Joint Control\n\
+int8 WAIST_CCW = 11\n\
+int8 WAIST_CW = 12\n\
+\n\
+# Gripper Control\n\
+int8 GRIPPER_OPEN = 13\n\
+int8 GRIPPER_CLOSE = 14\n\
+\n\
+# Pose Control\n\
+int8 HOME_POSE = 15\n\
+int8 SLEEP_POSE = 16\n\
+\n\
+#########################################################################################################\n\
+\n\
+# Customize configurations for the Interbotix Arm\n\
+# Inc/Dec Joint speed\n\
+int8 SPEED_INC = 17\n\
+int8 SPEED_DEC = 18\n\
+\n\
+# Quickly toggle between a fast and slow speed setting\n\
+int8 SPEED_COURSE = 19\n\
+int8 SPEED_FINE = 20\n\
+\n\
+# Inc/Dec Gripper pressure\n\
+int8 GRIPPER_PWM_INC = 21\n\
+int8 GRIPPER_PWM_DEC = 22\n\
+\n\
+#########################################################################################################\n\
+\n\
+# Control the motion of the Interbotix Arm\n\
+int8 ee_x_cmd\n\
+int8 ee_y_cmd\n\
+int8 ee_z_cmd\n\
+int8 ee_roll_cmd\n\
+int8 ee_pitch_cmd\n\
+\n\
+# Independent Joint/Pose Control\n\
+int8 waist_cmd\n\
+int8 gripper_cmd\n\
+int8 robot_pose\n\
+\n\
+# Speed Configs\n\
+int8 speed_cmd\n\
+int8 toggle_speed_cmd\n\
+int8 gripper_pwm_cmd\n\
+";
   }
 
   static const char* value(const ::interbotix_joy_control::ArmJoyControl_<ContainerAllocator>&) { return value(); }

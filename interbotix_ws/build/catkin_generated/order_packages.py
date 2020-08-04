@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = '/home/tx2-08/ROS-Projects/interbotix_ws/src'
-whitelisted_packages = ''.split(';') if '' != '' else []
-blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/tx2-08/ROS-Projects/interbotix_ws/devel;/opt/ros/melodic'.split(';') if '/home/tx2-08/ROS-Projects/interbotix_ws/devel;/opt/ros/melodic' != '' else []
+source_root_dir = "/home/locobot/ROS-Projects/interbotix_ws/src"
+whitelisted_packages = "".split(';') if "" != "" else []
+blacklisted_packages = "".split(';') if "" != "" else []
+underlay_workspaces = "/home/locobot/ROS-Projects/interbotix_ws/devel;/home/locobot/low_cost_ws/devel;/home/locobot/camera_ws/devel;/opt/ros/kinetic".split(';') if "/home/locobot/ROS-Projects/interbotix_ws/devel;/home/locobot/low_cost_ws/devel;/home/locobot/camera_ws/devel;/opt/ros/kinetic" != "" else []

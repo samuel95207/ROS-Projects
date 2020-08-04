@@ -1,0 +1,36 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_examples/interbotix_diagnostic_tool/src/diagnostic_tool_node.cpp" "/home/locobot/ROS-Projects/interbotix_ws/build/interbotix_ros_arms/interbotix_examples/interbotix_diagnostic_tool/CMakeFiles/diagnostic_tool_node.dir/src/diagnostic_tool_node.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ROSCONSOLE_BACKEND_LOG4CXX"
+  "ROS_BUILD_SHARED_LIBS=1"
+  "ROS_PACKAGE_NAME=\"interbotix_diagnostic_tool\""
+  )
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/locobot/ROS-Projects/interbotix_ws/devel/include"
+  "/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_sdk/include"
+  "/home/locobot/low_cost_ws/src/pyrobot/robots/LoCoBot/thirdparty/dynamixel-workbench/dynamixel_workbench_toolbox/include"
+  "/home/locobot/low_cost_ws/src/pyrobot/robots/LoCoBot/thirdparty/DynamixelSDK/ros/include"
+  "/opt/ros/kinetic/include"
+  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/usr/include/eigen3"
+  "/usr/include/OGRE/Overlay"
+  "/usr/include/OGRE"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

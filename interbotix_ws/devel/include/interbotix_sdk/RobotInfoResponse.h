@@ -116,31 +116,6 @@ ros::message_operations::Printer< ::interbotix_sdk::RobotInfoResponse_<Container
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::interbotix_sdk::RobotInfoResponse_<ContainerAllocator1> & lhs, const ::interbotix_sdk::RobotInfoResponse_<ContainerAllocator2> & rhs)
-{
-  return lhs.joint_names == rhs.joint_names &&
-    lhs.joint_ids == rhs.joint_ids &&
-    lhs.lower_joint_limits == rhs.lower_joint_limits &&
-    lhs.upper_joint_limits == rhs.upper_joint_limits &&
-    lhs.velocity_limits == rhs.velocity_limits &&
-    lhs.lower_gripper_limit == rhs.lower_gripper_limit &&
-    lhs.upper_gripper_limit == rhs.upper_gripper_limit &&
-    lhs.use_gripper == rhs.use_gripper &&
-    lhs.home_pos == rhs.home_pos &&
-    lhs.sleep_pos == rhs.sleep_pos &&
-    lhs.num_joints == rhs.num_joints &&
-    lhs.num_single_joints == rhs.num_single_joints;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::interbotix_sdk::RobotInfoResponse_<ContainerAllocator1> & lhs, const ::interbotix_sdk::RobotInfoResponse_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace interbotix_sdk
 
 namespace ros
@@ -148,6 +123,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_sdk': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_sdk/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -212,21 +193,21 @@ struct Definition< ::interbotix_sdk::RobotInfoResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "# joint names appear in the same order as they do in the joint_states.name vector\n"
-"string[] joint_names\n"
-"int16[] joint_ids\n"
-"float64[] lower_joint_limits\n"
-"float64[] upper_joint_limits\n"
-"float64[] velocity_limits\n"
-"float64 lower_gripper_limit\n"
-"float64 upper_gripper_limit\n"
-"bool use_gripper\n"
-"float64[] home_pos\n"
-"float64[] sleep_pos\n"
-"int8 num_joints\n"
-"int8 num_single_joints\n"
-"\n"
-;
+    return "\n\
+string[] joint_names\n\
+int16[] joint_ids\n\
+float64[] lower_joint_limits\n\
+float64[] upper_joint_limits\n\
+float64[] velocity_limits\n\
+float64 lower_gripper_limit\n\
+float64 upper_gripper_limit\n\
+bool use_gripper\n\
+float64[] home_pos\n\
+float64[] sleep_pos\n\
+int8 num_joints\n\
+int8 num_single_joints\n\
+\n\
+";
   }
 
   static const char* value(const ::interbotix_sdk::RobotInfoResponse_<ContainerAllocator>&) { return value(); }

@@ -3,10 +3,11 @@
 # keep symbol table as clean as possible by deleting all unnecessary symbols
 
 from os import path as os_path
-from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/tx2-08/ROS-Projects/interbotix_ws/src/interbotix_ros_arms_pi/interbotix_descriptions/src'.split(';')
+from pkgutil import extend_path
+
+__extended_path = "/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_descriptions/src".split(";")
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

@@ -58,7 +58,6 @@ ros::message_operations::Printer< ::interbotix_sdk::RobotInfoRequest_<ContainerA
 return s;
 }
 
-
 } // namespace interbotix_sdk
 
 namespace ros
@@ -66,6 +65,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_sdk': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_sdk/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -130,31 +135,31 @@ struct Definition< ::interbotix_sdk::RobotInfoRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "# Get robot information\n"
-"#\n"
-"# Note that all data that is returned in a vector is organized such that each index\n"
-"# corresponds to the joint at the same index as it appears in the joint_states topic.\n"
-"# Gripper info is NOT included in the vectors.\n"
-"#\n"
-"# Multiple types of robot information are provided, including:\n"
-"#   1) joint_names - the names of all joints in the robot\n"
-"#   2) joint_ids - the Dynamixel IDs for all joints in the robot\n"
-"#   3) lower_joint_limits - the lower joint limits in radians (taken from URDF)\n"
-"#   4) upper_joint_limits - the upper joint limits in radians (taken from URDF)\n"
-"#   5) velocity_limits - the velocity limits in rad/s (taken from URDF)\n"
-"#   6) lower_gripper_limit - the lower gripper limit in radians (taken from URDF)\n"
-"#   7) upper_gripper_limit - the upper gripper limit in radians (taken from URDF)\n"
-"#   8) use_gripper - True if the driver node can control the gripper - otherwise, False\n"
-"#   9) home_pos - home position for each robot; essentially commands all joints\n"
-"#                 (excluding gripper) to 0 radians (taken from arm_poses.h)\n"
-"#   10) sleep_pos - sleep position for each robot; essentially commands all joints\n"
-"#                   (excluding gripper) to a specific position in radians so that\n"
-"#                   if the driver node is shutdown (which torques off all motors),\n"
-"#                   the arm doesn't come crashing down (taken from arm_poses.h)\n"
-"#   11) num_joints - the number of joints in the arm (excluding gripper)\n"
-"#   12) num_single_joints - the number of all joints in the robot (includes gripper and any 'single' joints)\n"
-"\n"
-;
+    return "\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+";
   }
 
   static const char* value(const ::interbotix_sdk::RobotInfoRequest_<ContainerAllocator>&) { return value(); }

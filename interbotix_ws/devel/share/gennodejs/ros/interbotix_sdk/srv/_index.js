@@ -1,14 +1,14 @@
 
 "use strict";
 
-let OperatingModes = require('./OperatingModes.js')
 let FirmwareGains = require('./FirmwareGains.js')
-let RegisterValues = require('./RegisterValues.js')
+let OperatingModes = require('./OperatingModes.js')
 let RobotInfo = require('./RobotInfo.js')
+let RegisterValues = require('./RegisterValues.js')
 
 module.exports = {
-  OperatingModes: OperatingModes,
   FirmwareGains: FirmwareGains,
-  RegisterValues: RegisterValues,
+  OperatingModes: OperatingModes,
   RobotInfo: RobotInfo,
+  RegisterValues: RegisterValues,
 };

@@ -1,0 +1,8 @@
+prefix=/home/locobot/ROS-Projects/interbotix_ws/install
+
+Name: interbotix_diagnostic_tool
+Description: Description of interbotix_diagnostic_tool
+Version: 0.0.0
+Cflags: -I/home/locobot/ROS-Projects/interbotix_ws/install/include
+Libs: -L/home/locobot/ROS-Projects/interbotix_ws/install/lib 
+Requires: interbotix_sdk message_generation rosbag roscpp rospy rqt_plot sensor_msgs

@@ -9,7 +9,7 @@ import struct
 class TurretJoyControl(genpy.Message):
   _md5sum = "f699b95ec0a0298bd77c4a4d7f52404f"
   _type = "interbotix_turret_control/TurretJoyControl"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """# Send commands from the joy_node to the turret_control node
 
 # enum values that define the joystick controls for the robot
@@ -74,7 +74,7 @@ int8 toggle_speed_cmd
     """
     if args or kwds:
       super(TurretJoyControl, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.pan_cmd is None:
         self.pan_cmd = 0
       if self.tilt_cmd is None:
@@ -119,7 +119,7 @@ int8 toggle_speed_cmd
       (_x.pan_cmd, _x.tilt_cmd, _x.speed_cmd, _x.toggle_speed_cmd,) = _get_struct_4b().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -148,7 +148,7 @@ int8 toggle_speed_cmd
       (_x.pan_cmd, _x.tilt_cmd, _x.speed_cmd, _x.toggle_speed_cmd,) = _get_struct_4b().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

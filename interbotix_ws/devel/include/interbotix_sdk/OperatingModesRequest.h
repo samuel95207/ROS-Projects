@@ -63,20 +63,6 @@ struct OperatingModesRequest_
 
 
 
-// reducing the odds to have name collisions with Windows.h 
-#if defined(_WIN32) && defined(ARM_JOINTS_AND_GRIPPER)
-  #undef ARM_JOINTS_AND_GRIPPER
-#endif
-#if defined(_WIN32) && defined(ARM_JOINTS)
-  #undef ARM_JOINTS
-#endif
-#if defined(_WIN32) && defined(GRIPPER)
-  #undef GRIPPER
-#endif
-#if defined(_WIN32) && defined(SINGLE_JOINT)
-  #undef SINGLE_JOINT
-#endif
-
   enum {
     ARM_JOINTS_AND_GRIPPER = 1,
     ARM_JOINTS = 2,
@@ -114,25 +100,6 @@ ros::message_operations::Printer< ::interbotix_sdk::OperatingModesRequest_<Conta
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::interbotix_sdk::OperatingModesRequest_<ContainerAllocator1> & lhs, const ::interbotix_sdk::OperatingModesRequest_<ContainerAllocator2> & rhs)
-{
-  return lhs.cmd == rhs.cmd &&
-    lhs.mode == rhs.mode &&
-    lhs.joint_name == rhs.joint_name &&
-    lhs.use_custom_profiles == rhs.use_custom_profiles &&
-    lhs.profile_velocity == rhs.profile_velocity &&
-    lhs.profile_acceleration == rhs.profile_acceleration;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::interbotix_sdk::OperatingModesRequest_<ContainerAllocator1> & lhs, const ::interbotix_sdk::OperatingModesRequest_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace interbotix_sdk
 
 namespace ros
@@ -140,6 +107,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_sdk': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_sdk/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -204,51 +177,51 @@ struct Definition< ::interbotix_sdk::OperatingModesRequest_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "# Set the operating modes for the arm, gripper, or a single joint\n"
-"#\n"
-"# There are four options when setting operating modes:\n"
-"#   1) ARM_JOINTS_AND_GRIPPER - affects the operating modes for all joints, including the gripper.\n"
-"#   2) ARM_JOINTS - affects the operating modes for all joints, excluding the gripper.\n"
-"#   3) GRIPPER - affects the operating mode only for the gripper\n"
-"#   4) SINGLE_JOINT - affects the operating mode for the joint specified by 'joint_name'.\n"
-"#                     Note that the 'joint_name' parameter only needs to be used for this\n"
-"#                     option. For any other option, it can be left blank.\n"
-"# Set the option to the 'cmd' parameter and the 'joint_name' to the specified joint (if doing the\n"
-"# SINGLE_JOINT option).\n"
-"\n"
-"# There are 5 valid operating modes for the arm. They are...\n"
-"#   \"none\" - arm motors will not respond to any joint command\n"
-"#   \"position\" - arm motors will expect only position commands\n"
-"#   \"velocity\" - arm motors will expect only velocity commands\n"
-"#   \"current\" - arm motors will expect only current commands\n"
-"#   \"pwm\" - arm motors will expect only pwm commands\n"
-"#\n"
-"# The gripper can also be set to \"ext_position\". This allows the gripper to do\n"
-"# multiple rotations instead of just one. It should only be used if you are using\n"
-"# a custom gripper capable of doing more than one rotation.\n"
-"#\n"
-"# For \"position\" control, profile_velocity sets the max speed of each joint while\n"
-"# profile_acceleration sets the max acceleration. Please reference the motor datasheet\n"
-"# (just click a motor at http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/)\n"
-"# for conversion factors. Values can be between 0 and 32,767. If setting custom profiles,\n"
-"# make sure to set 'use_custom_x_profiles' to true.\n"
-"#\n"
-"# For \"velocity\" control, only profile_acceleration is used.\n"
-"#\n"
-"# The velocity and acceleration profiles are not used in the \"current\" and \"pwm\" modes.\n"
-"\n"
-"int8 ARM_JOINTS_AND_GRIPPER = 1\n"
-"int8 ARM_JOINTS = 2\n"
-"int8 GRIPPER = 3\n"
-"int8 SINGLE_JOINT = 4\n"
-"\n"
-"int8 cmd\n"
-"string mode\n"
-"string joint_name\n"
-"bool use_custom_profiles\n"
-"int32 profile_velocity\n"
-"int32 profile_acceleration\n"
-;
+    return "\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+int8 ARM_JOINTS_AND_GRIPPER = 1\n\
+int8 ARM_JOINTS = 2\n\
+int8 GRIPPER = 3\n\
+int8 SINGLE_JOINT = 4\n\
+\n\
+int8 cmd\n\
+string mode\n\
+string joint_name\n\
+bool use_custom_profiles\n\
+int32 profile_velocity\n\
+int32 profile_acceleration\n\
+";
   }
 
   static const char* value(const ::interbotix_sdk::OperatingModesRequest_<ContainerAllocator>&) { return value(); }

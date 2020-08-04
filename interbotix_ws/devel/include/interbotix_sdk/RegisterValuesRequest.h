@@ -53,20 +53,6 @@ struct RegisterValuesRequest_
 
 
 
-// reducing the odds to have name collisions with Windows.h 
-#if defined(_WIN32) && defined(ARM_JOINTS_AND_GRIPPER)
-  #undef ARM_JOINTS_AND_GRIPPER
-#endif
-#if defined(_WIN32) && defined(ARM_JOINTS)
-  #undef ARM_JOINTS
-#endif
-#if defined(_WIN32) && defined(GRIPPER)
-  #undef GRIPPER
-#endif
-#if defined(_WIN32) && defined(SINGLE_MOTOR)
-  #undef SINGLE_MOTOR
-#endif
-
   enum {
     ARM_JOINTS_AND_GRIPPER = 1,
     ARM_JOINTS = 2,
@@ -104,23 +90,6 @@ ros::message_operations::Printer< ::interbotix_sdk::RegisterValuesRequest_<Conta
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::interbotix_sdk::RegisterValuesRequest_<ContainerAllocator1> & lhs, const ::interbotix_sdk::RegisterValuesRequest_<ContainerAllocator2> & rhs)
-{
-  return lhs.cmd == rhs.cmd &&
-    lhs.motor_name == rhs.motor_name &&
-    lhs.addr_name == rhs.addr_name &&
-    lhs.value == rhs.value;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::interbotix_sdk::RegisterValuesRequest_<ContainerAllocator1> & lhs, const ::interbotix_sdk::RegisterValuesRequest_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace interbotix_sdk
 
 namespace ros
@@ -128,6 +97,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_sdk': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_sdk/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -192,46 +167,46 @@ struct Definition< ::interbotix_sdk::RegisterValuesRequest_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "# Set or get the register(s) value(s) from motor(s)\n"
-"#\n"
-"# To get familiar with the register values, go to...\n"
-"# http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/\n"
-"# ...click on a motor model, and scroll down to the 'Control Table of RAM Area' section.\n"
-"#\n"
-"# There are four options to set or get a register value:\n"
-"#   1) ARM_JOINTS_AND_GRIPPER - affects the register values for all arm joints, including the gripper.\n"
-"#   2) ARM_JOINTS - affects the register values for all arm joints, excluding the gripper.\n"
-"#   3) GRIPPER - affects the register value only for the gripper\n"
-"#   4) SINGLE_MOTOR - affects the register for the motor specified by 'motor_name'.\n"
-"#                     Note that the 'motor_name' parameter only needs to be used for this\n"
-"#                     option. For any other option, it can be left blank.\n"
-"#\n"
-"# Set the option to the 'cmd' parameter and the 'motor_name' to the specified motor (if doing the\n"
-"# SINGLE_MOTOR option)..\n"
-"#\n"
-"# Next, set the 'addr_name' parameter to the name of the register to be written to or read from.\n"
-"#\n"
-"# If setting the register(s) value, set the 'value' parameter to the desired value. This value will be\n"
-"# written to either one or many motors depending on the 'cmd' option selected. Note that if a joint is\n"
-"# controlled by two motors and the register is in the RAM area, both motors' registers will be updated\n"
-"# with the desired value. If the register is in the EEPROM area, it must be modified with another service call.\n"
-"# As an FYI, if modifying an EEPROM register, the servo must first be torqued off.\n"
-"#\n"
-"# If reading the register(s) values, do not set the 'value' parameter. Instead, call the service at this\n"
-"# stage. The 'values' vector will be automatically updated with the register(s) value(s). If reading from\n"
-"# multiple joints at a time, the indexes of the values correspond with the joint names at those indexes in the\n"
-"# joint_states.name vector.\n"
-"\n"
-"int8 ARM_JOINTS_AND_GRIPPER = 1\n"
-"int8 ARM_JOINTS = 2\n"
-"int8 GRIPPER = 3\n"
-"int8 SINGLE_MOTOR = 4\n"
-"\n"
-"int8 cmd\n"
-"string motor_name\n"
-"string addr_name\n"
-"int32 value\n"
-;
+    return "\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+int8 ARM_JOINTS_AND_GRIPPER = 1\n\
+int8 ARM_JOINTS = 2\n\
+int8 GRIPPER = 3\n\
+int8 SINGLE_MOTOR = 4\n\
+\n\
+int8 cmd\n\
+string motor_name\n\
+string addr_name\n\
+int32 value\n\
+";
   }
 
   static const char* value(const ::interbotix_sdk::RegisterValuesRequest_<ContainerAllocator>&) { return value(); }

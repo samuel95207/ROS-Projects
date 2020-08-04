@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/tx2-08/ROS-Projects/interbotix_ws/install/setup.sh
+    local-name: /home/locobot/ROS-Projects/interbotix_ws/install/setup.sh

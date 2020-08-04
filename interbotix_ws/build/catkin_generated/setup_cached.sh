@@ -7,5 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/tx2-08/ROS-Projects/interbotix_ws/build"
-export PYTHONPATH="/home/tx2-08/ROS-Projects/interbotix_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export PKG_CONFIG_PATH="/home/locobot/ROS-Projects/interbotix_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD="/home/locobot/ROS-Projects/interbotix_ws/build"
+export PYTHONPATH="/home/locobot/ROS-Projects/interbotix_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"

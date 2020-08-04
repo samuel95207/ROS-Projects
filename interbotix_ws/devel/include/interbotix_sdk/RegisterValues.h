@@ -57,8 +57,8 @@ struct DataType< ::interbotix_sdk::RegisterValues > {
 };
 
 
-// service_traits::MD5Sum< ::interbotix_sdk::RegisterValuesRequest> should match
-// service_traits::MD5Sum< ::interbotix_sdk::RegisterValues >
+// service_traits::MD5Sum< ::interbotix_sdk::RegisterValuesRequest> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::RegisterValues > 
 template<>
 struct MD5Sum< ::interbotix_sdk::RegisterValuesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::interbotix_sdk::RegisterValuesRequest>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::RegisterValuesRequest> should match
-// service_traits::DataType< ::interbotix_sdk::RegisterValues >
+// service_traits::DataType< ::interbotix_sdk::RegisterValuesRequest> should match 
+// service_traits::DataType< ::interbotix_sdk::RegisterValues > 
 template<>
 struct DataType< ::interbotix_sdk::RegisterValuesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::interbotix_sdk::RegisterValuesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::interbotix_sdk::RegisterValuesResponse> should match
-// service_traits::MD5Sum< ::interbotix_sdk::RegisterValues >
+// service_traits::MD5Sum< ::interbotix_sdk::RegisterValuesResponse> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::RegisterValues > 
 template<>
 struct MD5Sum< ::interbotix_sdk::RegisterValuesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::interbotix_sdk::RegisterValuesResponse>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::RegisterValuesResponse> should match
-// service_traits::DataType< ::interbotix_sdk::RegisterValues >
+// service_traits::DataType< ::interbotix_sdk::RegisterValuesResponse> should match 
+// service_traits::DataType< ::interbotix_sdk::RegisterValues > 
 template<>
 struct DataType< ::interbotix_sdk::RegisterValuesResponse>
 {

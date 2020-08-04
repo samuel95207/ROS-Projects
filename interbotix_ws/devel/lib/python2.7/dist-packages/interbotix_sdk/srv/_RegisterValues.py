@@ -9,36 +9,36 @@ import struct
 class RegisterValuesRequest(genpy.Message):
   _md5sum = "725e8187efb86073bd6c7e5fa5bb725f"
   _type = "interbotix_sdk/RegisterValuesRequest"
-  _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """# Set or get the register(s) value(s) from motor(s)
-#
-# To get familiar with the register values, go to...
-# http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/
-# ...click on a motor model, and scroll down to the 'Control Table of RAM Area' section.
-#
-# There are four options to set or get a register value:
-#   1) ARM_JOINTS_AND_GRIPPER - affects the register values for all arm joints, including the gripper.
-#   2) ARM_JOINTS - affects the register values for all arm joints, excluding the gripper.
-#   3) GRIPPER - affects the register value only for the gripper
-#   4) SINGLE_MOTOR - affects the register for the motor specified by 'motor_name'.
-#                     Note that the 'motor_name' parameter only needs to be used for this
-#                     option. For any other option, it can be left blank.
-#
-# Set the option to the 'cmd' parameter and the 'motor_name' to the specified motor (if doing the
-# SINGLE_MOTOR option)..
-#
-# Next, set the 'addr_name' parameter to the name of the register to be written to or read from.
-#
-# If setting the register(s) value, set the 'value' parameter to the desired value. This value will be
-# written to either one or many motors depending on the 'cmd' option selected. Note that if a joint is
-# controlled by two motors and the register is in the RAM area, both motors' registers will be updated
-# with the desired value. If the register is in the EEPROM area, it must be modified with another service call.
-# As an FYI, if modifying an EEPROM register, the servo must first be torqued off.
-#
-# If reading the register(s) values, do not set the 'value' parameter. Instead, call the service at this
-# stage. The 'values' vector will be automatically updated with the register(s) value(s). If reading from
-# multiple joints at a time, the indexes of the values correspond with the joint names at those indexes in the
-# joint_states.name vector.
+  _has_header = False #flag to mark the presence of a Header object
+  _full_text = """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int8 ARM_JOINTS_AND_GRIPPER = 1
 int8 ARM_JOINTS = 2
@@ -75,7 +75,7 @@ int32 value
     """
     if args or kwds:
       super(RegisterValuesRequest, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.cmd is None:
         self.cmd = 0
       if self.motor_name is None:
@@ -102,8 +102,7 @@ int32 value
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.cmd
-      buff.write(_get_struct_b().pack(_x))
+      buff.write(_get_struct_b().pack(self.cmd))
       _x = self.motor_name
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -116,8 +115,7 @@ int32 value
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      _x = self.value
-      buff.write(_get_struct_i().pack(_x))
+      buff.write(_get_struct_i().pack(self.value))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -154,7 +152,7 @@ int32 value
       (self.value,) = _get_struct_i().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -164,8 +162,7 @@ int32 value
     :param numpy: numpy python module
     """
     try:
-      _x = self.cmd
-      buff.write(_get_struct_b().pack(_x))
+      buff.write(_get_struct_b().pack(self.cmd))
       _x = self.motor_name
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -178,8 +175,7 @@ int32 value
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      _x = self.value
-      buff.write(_get_struct_i().pack(_x))
+      buff.write(_get_struct_i().pack(self.value))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -217,24 +213,24 @@ int32 value
       (self.value,) = _get_struct_i().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_b = None
-def _get_struct_b():
-    global _struct_b
-    if _struct_b is None:
-        _struct_b = struct.Struct("<b")
-    return _struct_b
 _struct_i = None
 def _get_struct_i():
     global _struct_i
     if _struct_i is None:
         _struct_i = struct.Struct("<i")
     return _struct_i
+_struct_b = None
+def _get_struct_b():
+    global _struct_b
+    if _struct_b is None:
+        _struct_b = struct.Struct("<b")
+    return _struct_b
 # This Python file uses the following encoding: utf-8
 """autogenerated by genpy from interbotix_sdk/RegisterValuesResponse.msg. Do not edit."""
 import sys
@@ -246,7 +242,7 @@ import struct
 class RegisterValuesResponse(genpy.Message):
   _md5sum = "5dd1053b3769329bd3895728a55810d3"
   _type = "interbotix_sdk/RegisterValuesResponse"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """int32[] values
 
 """
@@ -269,7 +265,7 @@ class RegisterValuesResponse(genpy.Message):
     """
     if args or kwds:
       super(RegisterValuesResponse, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.values is None:
         self.values = []
     else:
@@ -310,7 +306,7 @@ class RegisterValuesResponse(genpy.Message):
       self.values = struct.unpack(pattern, str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -344,7 +340,7 @@ class RegisterValuesResponse(genpy.Message):
       self.values = numpy.frombuffer(str[start:end], dtype=numpy.int32, count=length)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

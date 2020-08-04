@@ -1,0 +1,8 @@
+prefix=/home/locobot/ROS-Projects/interbotix_ws/devel
+
+Name: interbotix_puppet_control
+Description: Description of interbotix_puppet_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/locobot/ROS-Projects/interbotix_ws/devel/lib 
+Requires: interbotix_sdk rosbag roscpp tf2_ros rviz sensor_msgs std_msgs std_srvs

@@ -96,27 +96,6 @@ ros::message_operations::Printer< ::interbotix_sdk::FirmwareGainsRequest_<Contai
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::interbotix_sdk::FirmwareGainsRequest_<ContainerAllocator1> & lhs, const ::interbotix_sdk::FirmwareGainsRequest_<ContainerAllocator2> & rhs)
-{
-  return lhs.joint_id == rhs.joint_id &&
-    lhs.Kp_pos == rhs.Kp_pos &&
-    lhs.Ki_pos == rhs.Ki_pos &&
-    lhs.Kd_pos == rhs.Kd_pos &&
-    lhs.K1 == rhs.K1 &&
-    lhs.K2 == rhs.K2 &&
-    lhs.Kp_vel == rhs.Kp_vel &&
-    lhs.Ki_vel == rhs.Ki_vel;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::interbotix_sdk::FirmwareGainsRequest_<ContainerAllocator1> & lhs, const ::interbotix_sdk::FirmwareGainsRequest_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace interbotix_sdk
 
 namespace ros
@@ -124,6 +103,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_sdk': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_sdk/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -188,43 +173,43 @@ struct Definition< ::interbotix_sdk::FirmwareGainsRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "# Send Position PID and/or Velocity PI gains to the firmware\n"
-"#\n"
-"# To get familiar with the register values, go to...\n"
-"# http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/\n"
-"# ...click on a motor model, and scroll down to the 'Control Table of RAM Area' section.\n"
-"#\n"
-"# Set 'joint_id' to 0 if you want to specify pid gains for each joint separately.\n"
-"# Each column in the arrays below will then correspond to a single joint. Note that\n"
-"# this is the case even if the joint is controlled by two motors. Thus, the total\n"
-"# size of each array will be equivalent to the number of joints in the robot. Also,\n"
-"# joints are listed from the 'bottom-up'. For example, the indexes corresponding to\n"
-"# the WX200 robot would be [waist, shoulder, elbow, wrist_angle, wrist_rotate, gripper].\n"
-"#\n"
-"# Set 'joint_id' to 1 or higher to specify pid gains for only that joint. In this\n"
-"# case, 'joint_id' corresponds to the motor id specified in the robot-specific 'yaml'\n"
-"# file located in the 'config' directory. Additionally, the arrays below will all\n"
-"# have a length of 1.\n"
-"int8 joint_id\n"
-"\n"
-"# Each index in the arrays below correspond to a specific joint. Note that if a\n"
-"# joint is controlled by two motors, both motors' pid gains will change. Values\n"
-"# can range from 0 - 16,383.\n"
-"int32[] Kp_pos\n"
-"int32[] Ki_pos\n"
-"int32[] Kd_pos\n"
-"\n"
-"# In a similar fashion, the feed-forward velocity gains (K1) and feed-forward acceleration\n"
-"# gains (K2) can be specified. The range of values is the same as that for the PID gains.\n"
-"\n"
-"int32[] K1\n"
-"int32[] K2\n"
-"\n"
-"# Set Velocity PI gains similarly below.\n"
-"\n"
-"int32[] Kp_vel\n"
-"int32[] Ki_vel\n"
-;
+    return "\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+int8 joint_id\n\
+\n\
+\n\
+\n\
+\n\
+int32[] Kp_pos\n\
+int32[] Ki_pos\n\
+int32[] Kd_pos\n\
+\n\
+\n\
+\n\
+\n\
+int32[] K1\n\
+int32[] K2\n\
+\n\
+\n\
+\n\
+int32[] Kp_vel\n\
+int32[] Ki_vel\n\
+";
   }
 
   static const char* value(const ::interbotix_sdk::FirmwareGainsRequest_<ContainerAllocator>&) { return value(); }

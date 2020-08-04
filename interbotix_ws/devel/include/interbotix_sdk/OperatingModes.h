@@ -57,8 +57,8 @@ struct DataType< ::interbotix_sdk::OperatingModes > {
 };
 
 
-// service_traits::MD5Sum< ::interbotix_sdk::OperatingModesRequest> should match
-// service_traits::MD5Sum< ::interbotix_sdk::OperatingModes >
+// service_traits::MD5Sum< ::interbotix_sdk::OperatingModesRequest> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::OperatingModes > 
 template<>
 struct MD5Sum< ::interbotix_sdk::OperatingModesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::interbotix_sdk::OperatingModesRequest>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::OperatingModesRequest> should match
-// service_traits::DataType< ::interbotix_sdk::OperatingModes >
+// service_traits::DataType< ::interbotix_sdk::OperatingModesRequest> should match 
+// service_traits::DataType< ::interbotix_sdk::OperatingModes > 
 template<>
 struct DataType< ::interbotix_sdk::OperatingModesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::interbotix_sdk::OperatingModesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::interbotix_sdk::OperatingModesResponse> should match
-// service_traits::MD5Sum< ::interbotix_sdk::OperatingModes >
+// service_traits::MD5Sum< ::interbotix_sdk::OperatingModesResponse> should match 
+// service_traits::MD5Sum< ::interbotix_sdk::OperatingModes > 
 template<>
 struct MD5Sum< ::interbotix_sdk::OperatingModesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::interbotix_sdk::OperatingModesResponse>
   }
 };
 
-// service_traits::DataType< ::interbotix_sdk::OperatingModesResponse> should match
-// service_traits::DataType< ::interbotix_sdk::OperatingModes >
+// service_traits::DataType< ::interbotix_sdk::OperatingModesResponse> should match 
+// service_traits::DataType< ::interbotix_sdk::OperatingModes > 
 template<>
 struct DataType< ::interbotix_sdk::OperatingModesResponse>
 {

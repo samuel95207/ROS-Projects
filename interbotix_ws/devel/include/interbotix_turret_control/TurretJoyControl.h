@@ -53,35 +53,6 @@ struct TurretJoyControl_
 
 
 
-// reducing the odds to have name collisions with Windows.h 
-#if defined(_WIN32) && defined(PAN_CCW)
-  #undef PAN_CCW
-#endif
-#if defined(_WIN32) && defined(PAN_CW)
-  #undef PAN_CW
-#endif
-#if defined(_WIN32) && defined(TILT_UP)
-  #undef TILT_UP
-#endif
-#if defined(_WIN32) && defined(TILT_DOWN)
-  #undef TILT_DOWN
-#endif
-#if defined(_WIN32) && defined(PAN_TILT_HOME)
-  #undef PAN_TILT_HOME
-#endif
-#if defined(_WIN32) && defined(SPEED_INC)
-  #undef SPEED_INC
-#endif
-#if defined(_WIN32) && defined(SPEED_DEC)
-  #undef SPEED_DEC
-#endif
-#if defined(_WIN32) && defined(SPEED_COURSE)
-  #undef SPEED_COURSE
-#endif
-#if defined(_WIN32) && defined(SPEED_FINE)
-  #undef SPEED_FINE
-#endif
-
   enum {
     PAN_CCW = 1,
     PAN_CW = 2,
@@ -134,23 +105,6 @@ ros::message_operations::Printer< ::interbotix_turret_control::TurretJoyControl_
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::interbotix_turret_control::TurretJoyControl_<ContainerAllocator1> & lhs, const ::interbotix_turret_control::TurretJoyControl_<ContainerAllocator2> & rhs)
-{
-  return lhs.pan_cmd == rhs.pan_cmd &&
-    lhs.tilt_cmd == rhs.tilt_cmd &&
-    lhs.speed_cmd == rhs.speed_cmd &&
-    lhs.toggle_speed_cmd == rhs.toggle_speed_cmd;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::interbotix_turret_control::TurretJoyControl_<ContainerAllocator1> & lhs, const ::interbotix_turret_control::TurretJoyControl_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace interbotix_turret_control
 
 namespace ros
@@ -158,6 +112,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'interbotix_turret_control': ['/home/locobot/ROS-Projects/interbotix_ws/src/interbotix_ros_arms/interbotix_examples/interbotix_turret_control/msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -222,40 +182,40 @@ struct Definition< ::interbotix_turret_control::TurretJoyControl_<ContainerAlloc
 {
   static const char* value()
   {
-    return "# Send commands from the joy_node to the turret_control node\n"
-"\n"
-"# enum values that define the joystick controls for the robot\n"
-"\n"
-"#########################################################################################################\n"
-"\n"
-"# Control the pan-and-tilt mechanism\n"
-"int8 PAN_CCW = 1\n"
-"int8 PAN_CW = 2\n"
-"int8 TILT_UP = 3\n"
-"int8 TILT_DOWN = 4\n"
-"int8 PAN_TILT_HOME = 5\n"
-"\n"
-"#########################################################################################################\n"
-"\n"
-"# Customize configurations for the Interbotix Turret\n"
-"# Inc/Dec Joint speed\n"
-"int8 SPEED_INC = 6\n"
-"int8 SPEED_DEC = 7\n"
-"\n"
-"# Quickly toggle between a fast and slow speed setting\n"
-"int8 SPEED_COURSE = 8\n"
-"int8 SPEED_FINE = 9\n"
-"\n"
-"#########################################################################################################\n"
-"\n"
-"# Control the motion of the pan-and-tilt mechanism\n"
-"int8 pan_cmd\n"
-"int8 tilt_cmd\n"
-"\n"
-"# Speed Configs\n"
-"int8 speed_cmd\n"
-"int8 toggle_speed_cmd\n"
-;
+    return "# Send commands from the joy_node to the turret_control node\n\
+\n\
+# enum values that define the joystick controls for the robot\n\
+\n\
+#########################################################################################################\n\
+\n\
+# Control the pan-and-tilt mechanism\n\
+int8 PAN_CCW = 1\n\
+int8 PAN_CW = 2\n\
+int8 TILT_UP = 3\n\
+int8 TILT_DOWN = 4\n\
+int8 PAN_TILT_HOME = 5\n\
+\n\
+#########################################################################################################\n\
+\n\
+# Customize configurations for the Interbotix Turret\n\
+# Inc/Dec Joint speed\n\
+int8 SPEED_INC = 6\n\
+int8 SPEED_DEC = 7\n\
+\n\
+# Quickly toggle between a fast and slow speed setting\n\
+int8 SPEED_COURSE = 8\n\
+int8 SPEED_FINE = 9\n\
+\n\
+#########################################################################################################\n\
+\n\
+# Control the motion of the pan-and-tilt mechanism\n\
+int8 pan_cmd\n\
+int8 tilt_cmd\n\
+\n\
+# Speed Configs\n\
+int8 speed_cmd\n\
+int8 toggle_speed_cmd\n\
+";
   }
 
   static const char* value(const ::interbotix_turret_control::TurretJoyControl_<ContainerAllocator>&) { return value(); }

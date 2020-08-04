@@ -9,7 +9,7 @@ import struct
 class JointCommands(genpy.Message):
   _md5sum = "306931a8f4b928ea86b21d23c7e4f90e"
   _type = "interbotix_sdk/JointCommands"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """# Send a vector of position [rad], velocity [rad/s], current [mA], or pwm commands to a group of joints synchronously
 # as defined in the 'order' sequence in the motor config files (excludes the 'gripper' joint if present)
 #
@@ -36,7 +36,7 @@ float64[] cmd
     """
     if args or kwds:
       super(JointCommands, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.cmd is None:
         self.cmd = []
     else:
@@ -77,7 +77,7 @@ float64[] cmd
       self.cmd = struct.unpack(pattern, str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -111,7 +111,7 @@ float64[] cmd
       self.cmd = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=length)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

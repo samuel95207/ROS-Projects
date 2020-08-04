@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/home/locobot/low_cost_ws/devel/lib;/opt/ros/kinetic/lib")

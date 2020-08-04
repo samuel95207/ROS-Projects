@@ -276,32 +276,32 @@
 (setf (get interbotix_sdk::RobotInfoRequest :md5sum-) "8cbf67af7802be3e000262518104df12")
 (setf (get interbotix_sdk::RobotInfoRequest :datatype-) "interbotix_sdk/RobotInfoRequest")
 (setf (get interbotix_sdk::RobotInfoRequest :definition-)
-      "# Get robot information
-#
-# Note that all data that is returned in a vector is organized such that each index
-# corresponds to the joint at the same index as it appears in the joint_states topic.
-# Gripper info is NOT included in the vectors.
-#
-# Multiple types of robot information are provided, including:
-#   1) joint_names - the names of all joints in the robot
-#   2) joint_ids - the Dynamixel IDs for all joints in the robot
-#   3) lower_joint_limits - the lower joint limits in radians (taken from URDF)
-#   4) upper_joint_limits - the upper joint limits in radians (taken from URDF)
-#   5) velocity_limits - the velocity limits in rad/s (taken from URDF)
-#   6) lower_gripper_limit - the lower gripper limit in radians (taken from URDF)
-#   7) upper_gripper_limit - the upper gripper limit in radians (taken from URDF)
-#   8) use_gripper - True if the driver node can control the gripper - otherwise, False
-#   9) home_pos - home position for each robot; essentially commands all joints
-#                 (excluding gripper) to 0 radians (taken from arm_poses.h)
-#   10) sleep_pos - sleep position for each robot; essentially commands all joints
-#                   (excluding gripper) to a specific position in radians so that
-#                   if the driver node is shutdown (which torques off all motors),
-#                   the arm doesn't come crashing down (taken from arm_poses.h)
-#   11) num_joints - the number of joints in the arm (excluding gripper)
-#   12) num_single_joints - the number of all joints in the robot (includes gripper and any 'single' joints)
+      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
-# joint names appear in the same order as they do in the joint_states.name vector
+
 string[] joint_names
 int16[] joint_ids
 float64[] lower_joint_limits
@@ -320,32 +320,32 @@ int8 num_single_joints
 (setf (get interbotix_sdk::RobotInfoResponse :md5sum-) "8cbf67af7802be3e000262518104df12")
 (setf (get interbotix_sdk::RobotInfoResponse :datatype-) "interbotix_sdk/RobotInfoResponse")
 (setf (get interbotix_sdk::RobotInfoResponse :definition-)
-      "# Get robot information
-#
-# Note that all data that is returned in a vector is organized such that each index
-# corresponds to the joint at the same index as it appears in the joint_states topic.
-# Gripper info is NOT included in the vectors.
-#
-# Multiple types of robot information are provided, including:
-#   1) joint_names - the names of all joints in the robot
-#   2) joint_ids - the Dynamixel IDs for all joints in the robot
-#   3) lower_joint_limits - the lower joint limits in radians (taken from URDF)
-#   4) upper_joint_limits - the upper joint limits in radians (taken from URDF)
-#   5) velocity_limits - the velocity limits in rad/s (taken from URDF)
-#   6) lower_gripper_limit - the lower gripper limit in radians (taken from URDF)
-#   7) upper_gripper_limit - the upper gripper limit in radians (taken from URDF)
-#   8) use_gripper - True if the driver node can control the gripper - otherwise, False
-#   9) home_pos - home position for each robot; essentially commands all joints
-#                 (excluding gripper) to 0 radians (taken from arm_poses.h)
-#   10) sleep_pos - sleep position for each robot; essentially commands all joints
-#                   (excluding gripper) to a specific position in radians so that
-#                   if the driver node is shutdown (which torques off all motors),
-#                   the arm doesn't come crashing down (taken from arm_poses.h)
-#   11) num_joints - the number of joints in the arm (excluding gripper)
-#   12) num_single_joints - the number of all joints in the robot (includes gripper and any 'single' joints)
+      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
-# joint names appear in the same order as they do in the joint_states.name vector
+
 string[] joint_names
 int16[] joint_ids
 float64[] lower_joint_limits

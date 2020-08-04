@@ -9,7 +9,7 @@ import struct
 class ArmJoyControl(genpy.Message):
   _md5sum = "74891567b0665aa1963bdc439b948bf5"
   _type = "interbotix_joy_control/ArmJoyControl"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """# Send commands from the joy_control node to the joy_robot_control node
 
 # enum values that define the joystick controls for the robot
@@ -123,7 +123,7 @@ int8 gripper_pwm_cmd
     """
     if args or kwds:
       super(ArmJoyControl, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.ee_x_cmd is None:
         self.ee_x_cmd = 0
       if self.ee_y_cmd is None:
@@ -189,7 +189,7 @@ int8 gripper_pwm_cmd
       (_x.ee_x_cmd, _x.ee_y_cmd, _x.ee_z_cmd, _x.ee_roll_cmd, _x.ee_pitch_cmd, _x.waist_cmd, _x.gripper_cmd, _x.robot_pose, _x.speed_cmd, _x.toggle_speed_cmd, _x.gripper_pwm_cmd,) = _get_struct_11b().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -218,7 +218,7 @@ int8 gripper_pwm_cmd
       (_x.ee_x_cmd, _x.ee_y_cmd, _x.ee_z_cmd, _x.ee_roll_cmd, _x.ee_pitch_cmd, _x.waist_cmd, _x.gripper_cmd, _x.robot_pose, _x.speed_cmd, _x.toggle_speed_cmd, _x.gripper_pwm_cmd,) = _get_struct_11b().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
