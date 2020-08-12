@@ -1,0 +1,2 @@
+apriltags_ros/apriltags:apriltags_ros/apriltags_ros:tutorial:usb_cam
+-DCATKIN_DEVEL_PREFIX=/home/lspss95207/ROS-Projects/hcc_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lspss95207/ROS-Projects/hcc_ws/install -G Unix Makefiles

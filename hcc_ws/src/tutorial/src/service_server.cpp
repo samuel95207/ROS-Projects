@@ -10,6 +10,10 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
+
+#define CV_HAAR_SCALE_IMAGE   2
+
+
 class MyServer
 {
   private:

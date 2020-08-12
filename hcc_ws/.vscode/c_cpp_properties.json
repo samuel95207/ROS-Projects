@@ -9,6 +9,7 @@
                 "/home/user/deng/hcc_ws/devel/include/**",
                 "/home/user/deng/sdc_ws/devel/include/**",
                 "/opt/ros/kinetic/include/**",
+                "/opt/ros/noetic/include/**",
                 "/home/user/deng/sdc_ws/src/DLC_localization/include/**",
                 "/home/user/deng/hcc_ws/src/apriltags_ros/apriltags/include/**",
                 "/home/user/deng/hcc_ws/src/apriltags_ros/apriltags_ros/include/**",
