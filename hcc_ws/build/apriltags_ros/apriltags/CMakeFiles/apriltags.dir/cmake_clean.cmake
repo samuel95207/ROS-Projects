@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/libapriltags.pdb"
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/libapriltags.so"
   "CMakeFiles/apriltags.dir/src/Edge.cc.o"
   "CMakeFiles/apriltags.dir/src/FloatImage.cc.o"
   "CMakeFiles/apriltags.dir/src/GLine2D.cc.o"
@@ -15,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/apriltags.dir/src/TagDetector.cc.o"
   "CMakeFiles/apriltags.dir/src/TagFamily.cc.o"
   "CMakeFiles/apriltags.dir/src/UnionFindSimple.cc.o"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/libapriltags.pdb"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/libapriltags.so"
 )
 
 # Per-language clean rules from dependency scanning.

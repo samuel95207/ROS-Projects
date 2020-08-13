@@ -1,8 +1,8 @@
-prefix=/home/lspss95207/ROS-Projects/hcc_ws/devel
+prefix=/home/locobot/ROS-Projects/hcc_ws/devel
 
 Name: apriltags_ros
 Description: Description of apriltags_ros
 Version: 0.1.2
-Cflags: -I/home/lspss95207/ROS-Projects/hcc_ws/devel/include -I/home/lspss95207/ROS-Projects/hcc_ws/src/apriltags_ros/apriltags_ros/include -I/usr/include/eigen3
+Cflags: -I/home/locobot/ROS-Projects/hcc_ws/devel/include -I/home/locobot/ROS-Projects/hcc_ws/src/apriltags_ros/apriltags_ros/include -I/usr/include/eigen3
 Libs: -L${prefix}/lib -lapriltag_detector
 Requires: apriltags image_transport roscpp sensor_msgs geometry_msgs tf cv_bridge message_runtime nodelet std_msgs

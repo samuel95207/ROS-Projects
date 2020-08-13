@@ -1,8 +1,8 @@
-prefix=/home/lspss95207/ROS-Projects/hcc_ws/devel
+prefix=/home/locobot/ROS-Projects/hcc_ws/devel
 
 Name: usb_cam
 Description: Description of usb_cam
 Version: 0.3.6
-Cflags: -I/home/lspss95207/ROS-Projects/hcc_ws/src/usb_cam/include
+Cflags: -I/home/locobot/ROS-Projects/hcc_ws/src/usb_cam/include
 Libs: -L${prefix}/lib -lusb_cam
 Requires: 

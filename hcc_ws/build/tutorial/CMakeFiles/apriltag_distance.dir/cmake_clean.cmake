@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_distance"
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_distance.pdb"
   "CMakeFiles/apriltag_distance.dir/src/apriltag_distance.cpp.o"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_distance.pdb"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_distance"
 )
 
 # Per-language clean rules from dependency scanning.

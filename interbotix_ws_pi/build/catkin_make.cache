@@ -1,0 +1,2 @@
+interbotix_ros_arms_pi/armbot/interbotix_joy_control:interbotix_ros_arms_pi/interbotix_descriptions:interbotix_ros_arms_pi/interbotix_sdk:interbotix_ros_arms_pi/turretbot/interbotix_turret_control
+-DCMAKE_CXX_FLAGS=-Wno-psabi -DCATKIN_DEVEL_PREFIX=/home/tx2-08/ROS-Projects/interbotix_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tx2-08/ROS-Projects/interbotix_ws/install -G Unix Makefiles

@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/opt/ros/noetic/lib")
+set(ORDERED_PATHS "/home/locobot/camera_ws/devel/lib;/opt/ros/kinetic/lib")
