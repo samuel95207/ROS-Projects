@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tutorial/CMakeFiles/apriltag_distance.dir/rule:
+	cd /home/lspss95207/ROS-Projects/hcc_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tutorial/CMakeFiles/apriltag_distance.dir/rule
+.PHONY : tutorial/CMakeFiles/apriltag_distance.dir/rule
+
+# Convenience name for target.
+apriltag_distance: tutorial/CMakeFiles/apriltag_distance.dir/rule
+
+.PHONY : apriltag_distance
+
+# fast build rule for target.
+apriltag_distance/fast:
+	cd /home/lspss95207/ROS-Projects/hcc_ws/build && $(MAKE) -f tutorial/CMakeFiles/apriltag_distance.dir/build.make tutorial/CMakeFiles/apriltag_distance.dir/build
+.PHONY : apriltag_distance/fast
+
+# Convenience name for target.
 tutorial/CMakeFiles/apriltag_lab.dir/rule:
 	cd /home/lspss95207/ROS-Projects/hcc_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tutorial/CMakeFiles/apriltag_lab.dir/rule
 .PHONY : tutorial/CMakeFiles/apriltag_lab.dir/rule
@@ -407,6 +422,33 @@ tutorial_genpy/fast:
 	cd /home/lspss95207/ROS-Projects/hcc_ws/build && $(MAKE) -f tutorial/CMakeFiles/tutorial_genpy.dir/build.make tutorial/CMakeFiles/tutorial_genpy.dir/build
 .PHONY : tutorial_genpy/fast
 
+src/apriltag_distance.o: src/apriltag_distance.cpp.o
+
+.PHONY : src/apriltag_distance.o
+
+# target to build an object file
+src/apriltag_distance.cpp.o:
+	cd /home/lspss95207/ROS-Projects/hcc_ws/build && $(MAKE) -f tutorial/CMakeFiles/apriltag_distance.dir/build.make tutorial/CMakeFiles/apriltag_distance.dir/src/apriltag_distance.cpp.o
+.PHONY : src/apriltag_distance.cpp.o
+
+src/apriltag_distance.i: src/apriltag_distance.cpp.i
+
+.PHONY : src/apriltag_distance.i
+
+# target to preprocess a source file
+src/apriltag_distance.cpp.i:
+	cd /home/lspss95207/ROS-Projects/hcc_ws/build && $(MAKE) -f tutorial/CMakeFiles/apriltag_distance.dir/build.make tutorial/CMakeFiles/apriltag_distance.dir/src/apriltag_distance.cpp.i
+.PHONY : src/apriltag_distance.cpp.i
+
+src/apriltag_distance.s: src/apriltag_distance.cpp.s
+
+.PHONY : src/apriltag_distance.s
+
+# target to generate assembly for a file
+src/apriltag_distance.cpp.s:
+	cd /home/lspss95207/ROS-Projects/hcc_ws/build && $(MAKE) -f tutorial/CMakeFiles/apriltag_distance.dir/build.make tutorial/CMakeFiles/apriltag_distance.dir/src/apriltag_distance.cpp.s
+.PHONY : src/apriltag_distance.cpp.s
+
 src/apriltag_lab.o: src/apriltag_lab.cpp.o
 
 .PHONY : src/apriltag_lab.o
@@ -500,6 +542,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... apriltag_distance"
 	@echo "... apriltag_lab"
 	@echo "... _tutorial_generate_messages_check_deps_my_service"
 	@echo "... test"
@@ -517,6 +560,9 @@ help:
 	@echo "... tutorial_generate_messages_py"
 	@echo "... tutorial_geneus"
 	@echo "... tutorial_genpy"
+	@echo "... src/apriltag_distance.o"
+	@echo "... src/apriltag_distance.i"
+	@echo "... src/apriltag_distance.s"
 	@echo "... src/apriltag_lab.o"
 	@echo "... src/apriltag_lab.i"
 	@echo "... src/apriltag_lab.s"

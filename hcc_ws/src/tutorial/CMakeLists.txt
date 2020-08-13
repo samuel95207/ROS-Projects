@@ -171,6 +171,10 @@ add_executable(apriltag_lab src/apriltag_lab.cpp)
 add_dependencies(apriltag_lab ${catkin_EXPORTED_TARGETS} tutorial_gencpp)
 target_link_libraries(apriltag_lab ${catkin_LIBRARIES})
 
+add_executable(apriltag_distance src/apriltag_distance.cpp)
+add_dependencies(apriltag_distance ${catkin_EXPORTED_TARGETS} tutorial_gencpp)
+target_link_libraries(apriltag_distance ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############

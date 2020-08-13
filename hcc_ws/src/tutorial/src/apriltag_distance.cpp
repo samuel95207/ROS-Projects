@@ -21,8 +21,8 @@ void listener()
     // use tf_listener to get the transformation from camera_link to tag 0
     for (int i = 0; i < 16; i++)
     {
-        string parent_id = "camera_link";
-        string child_id = "tag_" + std::to_string(i);
+        string parent_id = "map_tag_0";
+        string child_id = "map_tag_" + std::to_string(i);
         // string child_id = "tag_0";
         tf_listener->waitForTransform(child_id, parent_id, ros::Time::now(), ros::Duration(0.7));
         try
@@ -41,23 +41,16 @@ void listener()
 
             /*
                 please calucluate the distance from tag_0 to other tags
-
             */
             double x = v.getX();
             double y = v.getY();
             double z = v.getZ();
 
             double distance = sqrt(x * x + y * y + z * z);
-            std::cout << "distance: " << distance << std::endl << std::endl;
+            std::cout << "distance: " << distance << std::endl;
             /*
                 find the closet distance from the tag to camera_link(remember to modify the parent_id)
             */
-           
-           tf_listener->lookupTransform(parent_id, child_id, ros::Time(0), echo_transform);
-           if(distance < min_distance.second){
-               min_distance.first = i;
-               min_distance.second = distance;
-           }
         }
         catch (tf::TransformException &ex)
         {
@@ -65,35 +58,6 @@ void listener()
         }
     }
 
-    /*
-        find the camera position from map_tag_0
-    */
-    string parent_id = "tag_0";
-    string child_id = "tag_" + std::to_string(min_distance.first);
-    tf_listener->waitForTransform(child_id, parent_id, ros::Time::now(), ros::Duration(0.001));
-    try {
-
-        tf_listener->lookupTransform(parent_id, child_id, ros::Time(0), min_distance_trans);
-        tf_listener->lookupTransform(child_id, "camera_link", ros::Time(0), echo_transform);
-        tf::Transform localization_trans = min_distance_trans*echo_transform;
-        
-        /*
-            find transformation matrix from echo_transform and min_distance_trans
-        */
-        cout << "=================================\n";
-        cout << "*get the robot position*\n";
-        cout << "rotation:\n";
-        tf::Quaternion q = localization_trans.getRotation();
-        cout << "[" << q.getX() << ", " << q.getY() << ", "<< q.getZ() << ", " << q.getW() << "]" << endl;
-        tf::Vector3 v = localization_trans.getOrigin();
-        cout << "translation:\n";
-        cout << "[" << v.getX() << ", " << v.getY() << ", " << v.getZ() << "]" << endl;
-        cout << "=================================\n";
-    }
-    catch (tf::TransformException& ex)
-    {
-        std::cout << "Exception thrown:" << ex.what() << std::endl;
-    }
     return;
 }
 

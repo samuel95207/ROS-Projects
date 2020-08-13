@@ -1234,6 +1234,19 @@ apriltags_ros_generate_messages/fast:
 .PHONY : apriltags_ros_generate_messages/fast
 
 #=============================================================================
+# Target rules for targets named apriltag_distance
+
+# Build rule for target.
+apriltag_distance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 apriltag_distance
+.PHONY : apriltag_distance
+
+# fast build rule for target.
+apriltag_distance/fast:
+	$(MAKE) -f tutorial/CMakeFiles/apriltag_distance.dir/build.make tutorial/CMakeFiles/apriltag_distance.dir/build
+.PHONY : apriltag_distance/fast
+
+#=============================================================================
 # Target rules for targets named apriltag_lab
 
 # Build rule for target.
@@ -1627,6 +1640,7 @@ help:
 	@echo "... nodelet_generate_messages_py"
 	@echo "... bond_generate_messages_eus"
 	@echo "... apriltags_ros_generate_messages"
+	@echo "... apriltag_distance"
 	@echo "... apriltag_lab"
 	@echo "... _tutorial_generate_messages_check_deps_my_service"
 	@echo "... tutorial_generate_messages_lisp"
