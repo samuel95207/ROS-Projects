@@ -7,5 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/lspss95207/ROS-Projects/hcc_ws/build'
-export PYTHONPATH='/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages:/home/lspss95207/ROS-Projects/interbotix_ws/devel/lib/python2.7/dist-packages'
+export PWD="/home/locobot/ROS-Projects/hcc_ws/build"

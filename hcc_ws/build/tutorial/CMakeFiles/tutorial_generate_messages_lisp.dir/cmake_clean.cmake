@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/share/common-lisp/ros/tutorial/srv/assignment.lisp"
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/share/common-lisp/ros/tutorial/srv/my_service.lisp"
   "CMakeFiles/tutorial_generate_messages_lisp"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/share/common-lisp/ros/tutorial/srv/my_service.lisp"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/share/common-lisp/ros/tutorial/srv/assignment.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

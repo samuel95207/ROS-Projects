@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/libusb_cam.pdb"
-  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/libusb_cam.so"
   "CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/libusb_cam.pdb"
+  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/libusb_cam.so"
 )
 
 # Per-language clean rules from dependency scanning.

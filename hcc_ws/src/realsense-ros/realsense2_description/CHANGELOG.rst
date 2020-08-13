@@ -2,9 +2,6 @@
 Changelog for package realsense2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.2.16 (2020-08-06)
--------------------
-
 2.2.15 (2020-07-13)
 -------------------
 * Merge remote-tracking branch 'origin/development' into development
