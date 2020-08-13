@@ -1,4 +1,4 @@
-prefix=/home/locobot/ROS-Projects/hcc_ws/install
+prefix=/home/lspss95207/ROS-Projects/hcc_ws/install
 
 Name: tutorial
 Description: Description of tutorial

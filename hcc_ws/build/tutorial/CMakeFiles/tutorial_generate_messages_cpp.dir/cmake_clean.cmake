@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/include/tutorial/assignment.h"
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/include/tutorial/my_service.h"
   "CMakeFiles/tutorial_generate_messages_cpp"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/include/tutorial/my_service.h"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/include/tutorial/assignment.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,2 +1,5 @@
 apriltag_localization.bag
 *.bag
+
+build/CMakeCache.txt
+src/CMakeLists.txt

@@ -67,14 +67,14 @@ set(darknet_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(darknet_ros_SOURCE_PREFIX /home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros)
-  set(darknet_ros_DEVEL_PREFIX /home/locobot/ROS-Projects/hcc_ws/devel)
+  set(darknet_ros_SOURCE_PREFIX /home/lspss95207/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros)
+  set(darknet_ros_DEVEL_PREFIX /home/lspss95207/ROS-Projects/hcc_ws/devel)
   set(darknet_ros_INSTALL_PREFIX "")
   set(darknet_ros_PREFIX ${darknet_ros_DEVEL_PREFIX})
 else()
   set(darknet_ros_SOURCE_PREFIX "")
   set(darknet_ros_DEVEL_PREFIX "")
-  set(darknet_ros_INSTALL_PREFIX /home/locobot/ROS-Projects/hcc_ws/install)
+  set(darknet_ros_INSTALL_PREFIX /home/lspss95207/ROS-Projects/hcc_ws/install)
   set(darknet_ros_PREFIX ${darknet_ros_INSTALL_PREFIX})
 endif()
 
@@ -116,7 +116,7 @@ if(NOT "include;/usr/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "darknet_ros_lib;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libpthread.so")
+set(libraries "darknet_ros_lib;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/locobot/ROS-Projects/hcc_ws/install/lib;/home/locobot/ROS-Projects/hcc_ws/devel/lib;/home/locobot/low_cost_ws/devel/lib;/home/locobot/camera_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/lspss95207/ROS-Projects/hcc_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

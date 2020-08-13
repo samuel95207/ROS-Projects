@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/libapriltag_detector_nodelet.pdb"
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/libapriltag_detector_nodelet.so"
   "CMakeFiles/apriltag_detector_nodelet.dir/src/apriltag_detector_nodelet.cpp.o"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/libapriltag_detector_nodelet.pdb"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/libapriltag_detector_nodelet.so"
 )
 
 # Per-language clean rules from dependency scanning.

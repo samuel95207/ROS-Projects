@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/darknet_ros_object_detection-test.dir/test/test_main.cpp.o"
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/darknet_ros/darknet_ros_object_detection-test"
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/darknet_ros/darknet_ros_object_detection-test.pdb"
   "CMakeFiles/darknet_ros_object_detection-test.dir/test/ObjectDetection.cpp.o"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/darknet_ros/darknet_ros_object_detection-test.pdb"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/darknet_ros/darknet_ros_object_detection-test"
+  "CMakeFiles/darknet_ros_object_detection-test.dir/test/test_main.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

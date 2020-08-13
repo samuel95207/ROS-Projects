@@ -1,8 +1,8 @@
-prefix=/home/locobot/ROS-Projects/hcc_ws/devel
+prefix=/home/lspss95207/ROS-Projects/hcc_ws/devel
 
 Name: tutorial
 Description: Description of tutorial
 Version: 0.0.0
-Cflags: -I/home/locobot/ROS-Projects/hcc_ws/devel/include
+Cflags: -I/home/lspss95207/ROS-Projects/hcc_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: 

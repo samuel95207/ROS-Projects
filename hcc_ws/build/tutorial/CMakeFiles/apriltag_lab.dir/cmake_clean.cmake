@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_lab"
+  "/home/lspss95207/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_lab.pdb"
   "CMakeFiles/apriltag_lab.dir/src/apriltag_lab.cpp.o"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_lab.pdb"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/tutorial/apriltag_lab"
 )
 
 # Per-language clean rules from dependency scanning.
