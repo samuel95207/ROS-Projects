@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/apriltags_ros_generate_messages_py"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/python2.7/dist-packages/apriltags_ros/msg/_AprilTagDetection.py"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/python2.7/dist-packages/apriltags_ros/msg/_AprilTagDetectionArray.py"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/python2.7/dist-packages/apriltags_ros/msg/__init__.py"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/lib/python2.7/dist-packages/apriltags_ros/msg/_AprilTagDetection.py"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/lib/python2.7/dist-packages/apriltags_ros/msg/_AprilTagDetectionArray.py"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/lib/python2.7/dist-packages/apriltags_ros/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

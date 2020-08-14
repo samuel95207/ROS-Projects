@@ -11,7 +11,7 @@ import std_msgs.msg
 class BoundingBoxes(genpy.Message):
   _md5sum = "004f6f4f48a741582d10735997905846"
   _type = "darknet_ros_msgs/BoundingBoxes"
-  _has_header = True #flag to mark the presence of a Header object
+  _has_header = True  # flag to mark the presence of a Header object
   _full_text = """Header header
 Header image_header
 BoundingBox[] bounding_boxes
@@ -30,8 +30,6 @@ uint32 seq
 # time-handling sugar is provided by the client library
 time stamp
 #Frame this data is associated with
-# 0: no frame
-# 1: global frame
 string frame_id
 
 ================================================================================
@@ -63,7 +61,7 @@ string Class
     """
     if args or kwds:
       super(BoundingBoxes, self).__init__(*args, **kwds)
-      #message fields cannot be None, assign default values for those that are
+      # message fields cannot be None, assign default values for those that are
       if self.header is None:
         self.header = std_msgs.msg.Header()
       if self.image_header is None:
@@ -178,7 +176,7 @@ string Class
         self.bounding_boxes.append(val1)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -280,7 +278,7 @@ string Class
         self.bounding_boxes.append(val1)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

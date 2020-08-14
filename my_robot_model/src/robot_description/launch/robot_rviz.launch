@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<!--            robot_rviz.launch             -->
+<!-- This documnent describes the rviz launch --> 
+<!--    Machenical Practice Testing Version   -->
+<!--         Last editted: 07/27, 2020        -->
+<!--           Editor: Samuel Huang           -->
+
+<launch>
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robot_description)/urdf/lspss95207_robot_description.xacro'"/>
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <!-- Show in Rviz -->
+  <node name="rviz" pkg="rviz" type="rviz"/>
+
+  <!-- Send joing values -->
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
+
+</launch>

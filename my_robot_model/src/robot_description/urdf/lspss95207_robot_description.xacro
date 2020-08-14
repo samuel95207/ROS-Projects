@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+
+<!-- lspss95207_robot_description.xacro.xacro -->
+<!-- This document describes the robot model  -->
+<!--   Machenical Practice Testing Version    -->
+<!--        Last editted: 07/27, 2020         -->
+<!--            Editor: Samuel Huang          -->
+
+<robot name="assignment" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- BGN - Include -->
+  <xacro:include filename="$(find robot_description)/urdf/links_joints.xacro"/>
+
+  <!-- END - Include -->   
+
+  <!-- BGN - Robot Description -->
+
+  <!-- Body -->
+  <xacro:arm_box 
+          name="base_cubic"
+          mass="1000"
+          origin_rpy="0 0 0" origin_xyz="0.5 1.0 0.3"
+          ixx="1" ixy="0" ixz="0"
+          iyy="1" iyz="0"
+          izz="1"
+          size="1 1 0.3"
+          color_name="Yellow" color="1 1 0 1"
+  />
+
+  <xacro:arm_joint_con_s 
+          name="base_rotate_joint" 
+          axis_xyz="0 0 1"
+          origin_rpy="0 0 0"
+          origin_xyz="0.5 1.0 0.6"
+          parent="base_cubic"
+          child="base_rotate_cylinder"
+  />
+
+  <xacro:arm_cylinder 
+            name="base_rotate_cylinder"
+            mass="800"
+            origin_rpy="0 0 0" origin_xyz="0 0 0"
+            ixx="1" ixy="0" ixz="0"
+            iyy="1" iyz="0"
+            izz="1"
+            radius="0.5" length="0.2"
+            color_name="Yellow" color="1 1 0 1"
+  />
+
+  <xacro:arm_joint name="base_joint" type="revolute"
+            axis_xyz="0 1 0"
+            limit="1.57"
+            origin_rpy="0 0 0" origin_xyz="0 0 0.1"
+            parent="base_rotate_cylinder"
+            child="shoulder_cubic"
+  />
+
+  <xacro:arm_box 
+          name="shoulder_cubic"
+          mass="1000"
+          origin_rpy="0 0 0" origin_xyz="0 0 0.6"
+          ixx="1" ixy="0" ixz="0"
+          iyy="1" iyz="0"
+          izz="1"
+          size="0.2 0.2 1.5"
+          color_name="Yellow" color="1 1 0 1"
+  />
+
+  <xacro:arm_joint_con_s 
+          name="sholder_rotate_joint" 
+          axis_xyz="0 0 1"
+          origin_rpy="0 0 0"
+          origin_xyz="0 0 1.5"
+          parent="shoulder_cubic"
+          child="shoulder_cylinder"
+  />
+
+  <xacro:arm_cylinder 
+            name="shoulder_cylinder"
+            mass="800"
+            origin_rpy="0 0 0" origin_xyz="0 0 0"
+            ixx="1" ixy="0" ixz="0"
+            iyy="1" iyz="0"
+            izz="1"
+            radius="0.2" length="0.3"
+            color_name="Yellow" color="1 1 0 1"
+  />
+
+  <xacro:arm_joint name="shoulder_joint" type="revolute"
+            axis_xyz="0 1 0"
+            limit="1.57"
+            origin_rpy="0 0 0" origin_xyz="0 0 0"
+            parent="shoulder_cylinder"
+            child="shoulder_cubic_2"
+  />
+
+  <xacro:arm_box 
+          name="shoulder_cubic_2"
+          mass="1000"
+          origin_rpy="0 0 0" origin_xyz="0 0 0.6"
+          ixx="1" ixy="0" ixz="0"
+          iyy="1" iyz="0"
+          izz="1"
+          size="0.2 0.2 1.5"
+          color_name="Yellow" color="1 1 0 1"
+  />
+
+
+  <xacro:arm_joint_dl_s name="shoulder_prismatic_joint" type="prismatic"
+            axis_xyz="0 0 1"
+            lower="0"
+            upper="1.1"
+            origin_rpy="0 0 0" origin_xyz="0 0 0.75"
+            parent="shoulder_cubic_2"
+            child="shoulder_cubic_3"
+  />
+
+
+  <xacro:arm_box 
+          name="shoulder_cubic_3"
+          mass="1000"
+          origin_rpy="0 0 0" origin_xyz="0 0 0.05"
+          ixx="1" ixy="0" ixz="0"
+          iyy="1" iyz="0"
+          izz="1"
+          size="0.15 0.15 1.2"
+          color_name="Yellow" color="1 1 0 1"
+  />
+
+
+      <xacro:arm_joint_con_s 
+          name="claw_rotate_joint" 
+          axis_xyz="0 0 1"
+          origin_rpy="0 0 0"
+          origin_xyz="0 0 0.65"
+          parent="shoulder_cubic_3"
+          child="claw_rotate_cylinder"
+  />
+
+    <xacro:arm_cylinder 
+            name="claw_rotate_cylinder"
+            mass="800"
+            origin_rpy="0 0 0" origin_xyz="0 0 0"
+            ixx="1" ixy="0" ixz="0"
+            iyy="1" iyz="0"
+            izz="1"
+            radius="0.1" length="0.05"
+            color_name="Yellow" color="1 1 0 1"
+  />
+
+
+   <xacro:arm_joint_dl name="claw_joint_right" type="revolute"
+            axis_xyz="0 1 0"
+            upper="0.2"
+            lower="0.5"
+            origin_rpy="0 0 0" origin_xyz="-0.07 0 0.05"
+            parent="claw_rotate_cylinder"
+            child="claw_right"
+  />
+
+   <xacro:arm_joint_dl name="claw_joint_left" type="revolute"
+            axis_xyz="0 1 0"
+            upper = "0.5"
+            lower = "0.2"
+            origin_rpy="0 0 0" origin_xyz="0.07 0 0.05"
+            parent="claw_rotate_cylinder"
+            child="claw_left"
+   />
+
+     <xacro:arm_cylinder 
+            name="claw_right"
+            mass="800"
+            origin_rpy="0 0 0" origin_xyz="0 0 0.1"
+            ixx="1" ixy="0" ixz="0"
+            iyy="1" iyz="0"
+            izz="1"
+            radius="0.02" length="0.3"
+            color_name="Yellow" color="1 1 0 1"
+  />
+
+    <xacro:arm_cylinder 
+            name="claw_left"
+            mass="800"
+            origin_rpy="0 0 0" origin_xyz="0 0 0.1"
+            ixx="1" ixy="0" ixz="0"
+            iyy="1" iyz="0"
+            izz="1"
+            radius="0.02" length="0.3"
+            color_name="Yellow" color="1 1 0 1"
+  />
+
+  <!-- End Effecto Description -->
+
+
+  <!-- END - Robot Description -->
+
+  <!-- Gazebo Controller Plugins -->
+  <gazebo>
+    <plugin name="ros_control" filename="libgazebo_ros_control.so">
+    </plugin>
+  </gazebo>
+
+</robot>

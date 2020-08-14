@@ -1,4 +1,4 @@
-prefix=/home/locobot/ROS-Projects/hcc_ws/install
+prefix=/home/lspss95207/Ros-Projects/hcc_ws/install
 
 Name: darknet_ros_msgs
 Description: Description of darknet_ros_msgs

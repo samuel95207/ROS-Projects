@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tutorial_generate_messages_nodejs"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/share/gennodejs/ros/tutorial/srv/my_service.js"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/share/gennodejs/ros/tutorial/srv/assignment.js"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/gennodejs/ros/tutorial/srv/my_service.js"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/gennodejs/ros/tutorial/srv/assignment.js"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs
+# Install script for directory: /home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/locobot/ROS-Projects/hcc_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lspss95207/Ros-Projects/hcc_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -32,74 +32,74 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/msg" TYPE FILE FILES
-    "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/msg/BoundingBox.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/msg/BoundingBoxes.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/msg/ObjectCount.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/msg/BoundingBox.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/msg/BoundingBoxes.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/msg/ObjectCount.msg"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/action" TYPE FILE FILES "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/action/CheckForObjects.action")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/action" TYPE FILE FILES "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/action/CheckForObjects.action")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/msg" TYPE FILE FILES
-    "/home/locobot/ROS-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsAction.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionGoal.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionResult.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionFeedback.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsGoal.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsResult.msg"
-    "/home/locobot/ROS-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsFeedback.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsAction.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionGoal.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionResult.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionFeedback.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsGoal.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsResult.msg"
+    "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/darknet_ros_msgs/msg/CheckForObjectsFeedback.msg"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/cmake" TYPE FILE FILES "/home/locobot/ROS-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs-msg-paths.cmake")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/cmake" TYPE FILE FILES "/home/lspss95207/Ros-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs-msg-paths.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/locobot/ROS-Projects/hcc_ws/devel/include/darknet_ros_msgs")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/lspss95207/Ros-Projects/hcc_ws/devel/include/darknet_ros_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/locobot/ROS-Projects/hcc_ws/devel/share/roseus/ros/darknet_ros_msgs")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/roseus/ros/darknet_ros_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/locobot/ROS-Projects/hcc_ws/devel/share/common-lisp/ros/darknet_ros_msgs")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/common-lisp/ros/darknet_ros_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/locobot/ROS-Projects/hcc_ws/devel/share/gennodejs/ros/darknet_ros_msgs")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/gennodejs/ros/darknet_ros_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/locobot/ROS-Projects/hcc_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/lspss95207/Ros-Projects/hcc_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/locobot/ROS-Projects/hcc_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/lspss95207/Ros-Projects/hcc_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/locobot/ROS-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs.pc")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lspss95207/Ros-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs.pc")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/cmake" TYPE FILE FILES "/home/locobot/ROS-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs-msg-extras.cmake")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/cmake" TYPE FILE FILES "/home/lspss95207/Ros-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs-msg-extras.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs/cmake" TYPE FILE FILES
-    "/home/locobot/ROS-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgsConfig.cmake"
-    "/home/locobot/ROS-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgsConfig-version.cmake"
+    "/home/lspss95207/Ros-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgsConfig.cmake"
+    "/home/lspss95207/Ros-Projects/hcc_ws/build/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgsConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs" TYPE FILE FILES "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/package.xml")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/darknet_ros_msgs" TYPE FILE FILES "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros_msgs/package.xml")
 endif()
 

@@ -1,0 +1,2 @@
+arm_description:robot_description
+-DCATKIN_DEVEL_PREFIX=/home/lspss95207/ROS-Projects/my_robot_model/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lspss95207/ROS-Projects/my_robot_model/catkin_ws/install -G Unix Makefiles

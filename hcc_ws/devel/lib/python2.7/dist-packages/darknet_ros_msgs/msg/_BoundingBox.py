@@ -9,7 +9,7 @@ import struct
 class BoundingBox(genpy.Message):
   _md5sum = "6b8f03f076d75c692c40b501a56253e0"
   _type = "darknet_ros_msgs/BoundingBox"
-  _has_header = False #flag to mark the presence of a Header object
+  _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64 probability
 int64 xmin
 int64 ymin
@@ -37,7 +37,7 @@ string Class
     """
     if args or kwds:
       super(BoundingBox, self).__init__(*args, **kwds)
-      #message fields cannot be None, assign default values for those that are
+      # message fields cannot be None, assign default values for those that are
       if self.probability is None:
         self.probability = 0.
       if self.xmin is None:
@@ -106,7 +106,7 @@ string Class
         self.Class = str[start:end]
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -150,7 +150,7 @@ string Class
         self.Class = str[start:end]
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

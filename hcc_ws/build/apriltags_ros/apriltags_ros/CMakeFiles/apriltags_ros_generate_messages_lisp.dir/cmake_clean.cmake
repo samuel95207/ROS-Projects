@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/apriltags_ros_generate_messages_lisp"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/share/common-lisp/ros/apriltags_ros/msg/AprilTagDetection.lisp"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/share/common-lisp/ros/apriltags_ros/msg/AprilTagDetectionArray.lisp"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/common-lisp/ros/apriltags_ros/msg/AprilTagDetection.lisp"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/share/common-lisp/ros/apriltags_ros/msg/AprilTagDetectionArray.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

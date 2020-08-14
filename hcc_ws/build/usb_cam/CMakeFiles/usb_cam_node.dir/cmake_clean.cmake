@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/usb_cam/usb_cam_node.pdb"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/lib/usb_cam/usb_cam_node"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/lib/usb_cam/usb_cam_node.pdb"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/lib/usb_cam/usb_cam_node"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros/test/ObjectDetection.cpp" "/home/locobot/ROS-Projects/hcc_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/ObjectDetection.cpp.o"
-  "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros/test/test_main.cpp" "/home/locobot/ROS-Projects/hcc_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/test_main.cpp.o"
+  "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros/test/ObjectDetection.cpp" "/home/lspss95207/Ros-Projects/hcc_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/ObjectDetection.cpp.o"
+  "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros/test/test_main.cpp" "/home/lspss95207/Ros-Projects/hcc_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/test/test_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "DARKNET_FILE_PATH=\"/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet\""
+  "DARKNET_FILE_PATH=\"/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet\""
   "OPENCV"
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
@@ -20,19 +20,19 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
-  "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet/src"
-  "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet/include"
-  "/home/locobot/ROS-Projects/hcc_ws/src/darknet_ros/darknet_ros/include"
-  "/home/locobot/ROS-Projects/hcc_ws/devel/include"
-  "/opt/ros/kinetic/include"
-  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/usr/include/opencv"
+  "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet/src"
+  "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet/include"
+  "/home/lspss95207/Ros-Projects/hcc_ws/src/darknet_ros/darknet_ros/include"
+  "/home/lspss95207/Ros-Projects/hcc_ws/devel/include"
+  "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/usr/src/googletest/googletest/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/locobot/ROS-Projects/hcc_ws/build/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/lspss95207/Ros-Projects/hcc_ws/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
