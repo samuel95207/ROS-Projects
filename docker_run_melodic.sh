@@ -36,7 +36,7 @@ docker run -it \
     --network host \
     --rm \
     --privileged \
-    lspss95207/ros-melodic \
+    lspss95207/ros-melodic:latest \
     bash 
 ash 
 retch \
