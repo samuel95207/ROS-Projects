@@ -37,8 +37,4 @@ docker run -it \
     --rm \
     --privileged \
     lspss95207/ros-melodic:latest \
-    bash 
-ash 
-retch \
-    bash 
-ash 
+    bash
