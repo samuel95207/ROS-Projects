@@ -32,7 +32,7 @@ cy = msg.P[6]
 def main():
     depth_image_sub = message_filters.Subscriber('/camera/aligned_depth_to_color/image_raw', Image)
     bb_sub = message_filters.Subscriber('/darknet_ros/bounding_boxes', BoundingBoxes)
-    ts = message_filters.ApproximateTimeSynchronizer([depth_image_sub, bb_sub], 10, 0.1)
+    ts = message_filters.ApproximateTimeSynchronizer([depth_image_sub, bb_sub], 10, 1000000)
     ts.registerCallback(callback)
     rospy.spin()
 
@@ -55,7 +55,7 @@ def callback(depth_img, bb):
     y_mean = (i.ymax + i.ymin) / 2
    
 
-    if i.Class=="mouse":
+    if i.Class=="sports ball":
       rospy.loginfo("see mouse")
       zc = cv_depthimage2[int(y_mean)][int(x_mean)]
       v1 = np.array(getXYZ(x_mean, y_mean, zc, fx, fy, cx, cy))

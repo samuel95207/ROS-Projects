@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  
+  <include file="$(find darknet_ros)/launch/yolo_v3.launch" />
+  <node name="d435_object_dis_py" output="screen" pkg="hcc_lab9" type="d435_object_dis.py" />
+
+</launch>
