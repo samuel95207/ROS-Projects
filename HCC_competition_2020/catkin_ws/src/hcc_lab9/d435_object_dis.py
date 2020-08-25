@@ -7,9 +7,11 @@ import cv2
 from cv_bridge import CvBridge, CvBridgeError
 from darknet_ros_msgs.msg import BoundingBoxes
 from sensor_msgs.msg import Image, CameraInfo
-from geometry_msgs.msg import PointStamped
+from geometry_msgs.msg import Point32
+from sensor_msgs.msg import PointCloud
 
-pub = rospy.Publisher('/object_pose', PointStamped, queue_size=10)
+
+pub = rospy.Publisher('/object_pose', PointCloud, queue_size=10)
 
 rospy.init_node('D435_Object_Distance', anonymous=True)
 rospy.loginfo("Start D435_Object_Distance")
@@ -40,23 +42,36 @@ def callback(depth_img, bb):
     cv_depthimage2 = np.array(cv_depthimage, dtype=np.float32)
   except CvBridgeError as e:
     print(e)
+    
+    
+  pointCloud = PointCloud()
+  pointCloud.header = depth_img.header
+  pointCloud.header.frame_id = "camera_color_optical_frame"
+    
+  points = []
 
   for i in bb.bounding_boxes:
     x_mean = (i.xmax + i.xmin) / 2
     y_mean = (i.ymax + i.ymin) / 2
+   
 
     if i.Class=="mouse":
       rospy.loginfo("see mouse")
       zc = cv_depthimage2[int(y_mean)][int(x_mean)]
       v1 = np.array(getXYZ(x_mean, y_mean, zc, fx, fy, cx, cy))
       print(v1/1000)
-      point_message = PointStamped()
-      point_message.header = depth_img.header
-      point_message.header.frame_id = "camera_color_optical_frame"
-      point_message.point.x = v1[0]/1000
-      point_message.point.y = v1[1]/1000
-      point_message.point.z = v1[2]/1000
-      pub.publish(point_message)
+      
+      point_message = Point32()
+      point_message.x = v1[0]/1000
+      point_message.y = v1[1]/1000
+      point_message.z = v1[2]/1000
+    
+      points.append(point_message)
+      
+  rospy.loginfo(points)
+     
+  pointCloud.points = points
+  pub.publish(pointCloud)
 
 
 def getXYZ(xp, yp, zc, fx,fy,cx,cy):
