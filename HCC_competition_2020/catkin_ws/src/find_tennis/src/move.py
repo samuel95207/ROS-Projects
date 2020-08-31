@@ -32,20 +32,15 @@ class DecisionMaker():
         self.rotate_timeout = 0.5
 
     def rotate_find(self):
+        # self.setMovement(pitch=0.6)
+
         cmd_vel_msg = Twist()
-
-        cmd_vel_msg.linear.x = 0
-        cmd_vel_msg.linear.y = 0
-        cmd_vel_msg.linear.z = 0
-        cmd_vel_msg.angular.x = 0
-        cmd_vel_msg.angular.y = 0
         cmd_vel_msg.angular.z = 0.6
-
         self.base_pub.publish(cmd_vel_msg)
+
 
     def move_callback(self,data):
         points = data.points
-        cmd_vel_msg = Twist()
         
         if(not points):
             rospy.loginfo("finding ball...")
@@ -55,26 +50,13 @@ class DecisionMaker():
             rospy.loginfo(points)
 
             if(points[0].y > self.rotate_threshold):
-                cmd_vel_msg.linear.x = 1
-                cmd_vel_msg.linear.y = 0
-                cmd_vel_msg.linear.z = 0
-                cmd_vel_msg.angular.x = 0
-                cmd_vel_msg.angular.y = 0
-                cmd_vel_msg.angular.z = 0.7
+                self.setMovement(x=1,pitch=0.7)
+
             elif(points[0].y < -self.rotate_threshold):
-                cmd_vel_msg.linear.x = 1
-                cmd_vel_msg.linear.y = 0
-                cmd_vel_msg.linear.z = 0
-                cmd_vel_msg.angular.x = 0
-                cmd_vel_msg.angular.y = 0
-                cmd_vel_msg.angular.z = -0.7
+                self.setMovement(x=1,pitch=-0.7)
+
             else:
-                cmd_vel_msg.linear.x = 1
-                cmd_vel_msg.linear.y = 0
-                cmd_vel_msg.linear.z = 0
-                cmd_vel_msg.angular.x = 0
-                cmd_vel_msg.angular.y = 0
-                cmd_vel_msg.angular.z = 0
+                self.setMovement(x=1)
                 self.camera_tilt_pub.publish(0)
             
             if(points[0].x < self.distance_threshold):
@@ -82,16 +64,28 @@ class DecisionMaker():
             else:
                 self.camera_tilt_pub.publish(0)
 
-        self.camera_tilt_pub.publish(0.01)
+        self.camera_tilt_pub.publish(1.0)
         
+
+        
+
+        self.rate.sleep()
+
+    def setMovement(self,x=0,y=0,z=0,raw=0,yaw=0,pitch=0):
+        cmd_vel_msg = Twist()
+
+        cmd_vel_msg.linear.x = x
+        cmd_vel_msg.linear.y = y
+        cmd_vel_msg.linear.z = z
+        cmd_vel_msg.angular.x = raw
+        cmd_vel_msg.angular.y = yaw
+        cmd_vel_msg.angular.z = pitch
 
         # rospy.loginfo(cmd_vel_msg)
         self.base_pub.publish(cmd_vel_msg)
 
-        self.rate.sleep()
 
-
-if __name__ == '__main__':
+if __name__ == '__main__':  
     try:
         dm = DecisionMaker()
     except rospy.ROSInterruptException:
